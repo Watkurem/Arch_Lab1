@@ -18,11 +18,38 @@
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-def welcome():
+def welcome(opts):
     print("Welcome to the Arch_Lab1 task planner!")
+    return main_menu(opts)
 
 def main_menu(opts):
     print("What would you like to do?\n")
     for option in opts:
-        print("  ", option)
-    return input()
+        print("  [{}] {}".format(option[0], option[1]))
+    return decide_main_menu(opts, input())
+
+def decide_main_menu(opts, choice):
+    choice = choice.upper()
+    for option in opts:
+        if choice == option[0]:
+            return option
+    print("Got {}! That's kinda wrong, try again.".format(choice))
+    decide_main_menu(main_menu(opts))
+    # if choice == opts[3][0]:
+    #     exit()
+    # elif choice == opts[0][0]:
+    #     add_new_task()
+    # elif choice == opts[1][0]:
+    #     view_pending_tasks()
+    # elif choice == opts[2][0]:
+    #     view_finished_tasks()
+    # else:
+    #     print("Got {}! That's kinda wrong, try again.".format(choice))
+    #     decide_main_menu(main_menu(opts))
+
+def new_task_dialog():
+    print("Creating new task.")
+    content = input("Task description: ")
+    date = input('Date (use "YYYY-MM-DD" format or similar ' +
+                 'with single character delimiters): ')
+    return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))

@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 # -*- coding: utf-8 -*-
 
 ################################################################################
@@ -20,33 +18,12 @@
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-import interface
-import engine
+import datetime
 
-# "Просмотр задач" должен включать возможность добавить, удалить, редактировать,
-# отметить завершённой, отметить незавершённой, очистить... That's about it?
+class Task:
+    def __init__(self, content_, year, month, day):
+        self.content = content_
+        self.date = datetime.date(year, month, day)
 
-
-tasks = list()
-
-def main():
-    OPTS = (
-        ("N", "Add new task", add_new_task),
-        ("L", "View pending tasks", view_pending_tasks),
-        ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit", quit)
-    )
-    interface.welcome(OPTS)[2]()
-
-def add_new_task():
-    engine.new_task(tasks, *interface.new_task_dialog())
-    pass
-
-def view_pending_tasks():
-    pass
-
-def view_finished_tasks():
-    pass
-
-if __name__=="__main__":
-   main()
+def new_task(tasks, content, year, month, day):
+    tasks += [Task(content, year, month, day)]

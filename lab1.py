@@ -20,8 +20,45 @@
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
+import interface
+# import engine
+
+# "Просмотр задач" должен включать возможность добавить, удалить, редактировать,
+# отметить завершённой, отметить незавершённой, очистить... That's about it?
+
+OPTS = (
+    "[N] Add new task",
+    "[L] View pending tasks",
+    "[F] View finished tasks",
+    "[Q] Quit",
+)
+
 def main():
-    print("Lol got ya!")
+    interface.welcome()
+    decide_main_menu(interface.main_menu(OPTS))
+    # engine.
+
+def decide_main_menu(choice):
+    if choice == "Q":
+        exit()
+    elif choice == "N":
+        add_new_task()
+    elif choice == "L":
+        view_pending_tasks()
+    elif choice == "F":
+        view_finished_tasks()
+    else:
+        print("Got {}! That's kinda wrong, try again.".format(choice))
+        decide_main_menu(interface.main_menu(OPTS))
+
+def add_new_task():
+    pass
+
+def view_pending_tasks():
+    pass
+
+def view_finished_tasks():
+    pass
 
 if __name__=="__main__":
    main()

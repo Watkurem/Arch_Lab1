@@ -18,23 +18,33 @@
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ################################################################################
 
-def welcome(opts):
+import locale
+
+locale.setlocale(locale.LC_ALL, "uk_UA.utf8")
+
+def welcome():
     print("Welcome to the Arch_Lab1 task planner!")
-    return main_menu(opts)
 
 def main_menu(opts):
-    print("What would you like to do?\n")
+    menu(opts, "\tMain menu")
+    return menu_decide(opts, input())
+
+def menu(opts, title):
+    print("=" * 80,
+          "\n",
+          title,
+          sep="")
     for option in opts:
         print("  [{}] {}".format(option[0], option[1]))
-    return decide_main_menu(opts, input())
 
-def decide_main_menu(opts, choice):
+def menu_decide(opts, choice):
+    print("\x1b[A", " " * 80, "\x1b[A", sep="")
     choice = choice.upper()
     for option in opts:
         if choice == option[0]:
             return option
     print("Got {}! That's kinda wrong, try again.".format(choice))
-    decide_main_menu(main_menu(opts))
+    menu_decide(main_menu(opts))
     # if choice == opts[3][0]:
     #     exit()
     # elif choice == opts[0][0]:
@@ -45,7 +55,7 @@ def decide_main_menu(opts, choice):
     #     view_finished_tasks()
     # else:
     #     print("Got {}! That's kinda wrong, try again.".format(choice))
-    #     decide_main_menu(main_menu(opts))
+    #     menu_decide(main_menu(opts))
 
 def new_task_dialog():
     print("Creating new task.")
@@ -53,3 +63,19 @@ def new_task_dialog():
     date = input('Date (use "YYYY-MM-DD" format or similar ' +
                  'with single character delimiters): ')
     return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))
+
+def print_tasks(tasks):
+    if tasks == []:
+        print("\n  >> No tasks found <<")
+    for task in tasks:
+        print()
+        print(task[1].strftime("%d %b %Y, %A:"))
+        print("\t", task[0])
+
+def finished_tasks_menu(opts):
+    menu(opts, "You are viewing finished tasks")
+    return menu_decide(opts, input())
+
+def pending_tasks_menu(opts):
+    menu(opts, "You are viewing pending tasks")
+    return menu_decide(opts, input())

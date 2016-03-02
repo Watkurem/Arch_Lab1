@@ -26,27 +26,63 @@ import engine
 # "Просмотр задач" должен включать возможность добавить, удалить, редактировать,
 # отметить завершённой, отметить незавершённой, очистить... That's about it?
 
-
-tasks = list()
-
 def main():
-    OPTS = (
+    interface.welcome()
+    main_menu()
+
+def add_new_task():
+    engine.new_task(*interface.new_task_dialog())
+
+def view_pending_tasks():
+    PENDING_TASK_OPTS = (
+        ("N", "Add new task", add_new_task),
+        ("R", "Remove task", remove_task),
+        ("E", "Edit task", edit_task),
+        ("M", "Mark task finished", finished_task),
+        ("F", "View finished tasks", view_finished_tasks),
+        ("Q", "Quit to main menu", main_menu)
+    )
+
+    interface.print_tasks(engine.view_pending_tasks())
+    interface.pending_tasks_menu(PENDING_TASK_OPTS)[2]()
+
+def view_finished_tasks():
+    FINISHED_TASK_OPTS = (
+        ("C", "Clear finished tasks", clear_finished_tasks),
+        ("R", "Remove task", remove_task),
+        ("E", "Edit task", edit_task),
+        ("M", "Mark task pending", pending_task),
+        ("L", "View pending tasks", view_pending_tasks),
+        ("Q", "Quit to main menu", main_menu)
+    )
+
+    interface.print_tasks(engine.view_finished_tasks())
+    interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
+
+def remove_task():
+    pass
+
+def edit_task():
+    pass
+
+def finished_task():
+    pass
+
+def main_menu():
+    MAIN_MENU_OPTS = (
         ("N", "Add new task", add_new_task),
         ("L", "View pending tasks", view_pending_tasks),
         ("F", "View finished tasks", view_finished_tasks),
         ("Q", "Quit", quit)
     )
-    interface.welcome(OPTS)[2]()
 
-def add_new_task():
-    engine.new_task(tasks, *interface.new_task_dialog())
+    interface.main_menu(MAIN_MENU_OPTS)[2]()
+
+def clear_finished_tasks():
     pass
 
-def view_pending_tasks():
-    pass
-
-def view_finished_tasks():
+def pending_task():
     pass
 
 if __name__=="__main__":
-   main()
+    main()

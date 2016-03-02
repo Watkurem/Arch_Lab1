@@ -20,10 +20,28 @@
 
 import datetime
 
+
 class Task:
     def __init__(self, content_, year, month, day):
         self.content = content_
         self.date = datetime.date(year, month, day)
+        self.finished = None
 
-def new_task(tasks, content, year, month, day):
-    tasks += [Task(content, year, month, day)]
+# For devtesting
+task_list = [
+    Task("Задача тестова 1", 2016, 3, 2),
+    Task("Задача тестова 2", 2016, 3, 3),
+    Task("Задача тестова 3", 2016, 3, 1),
+]
+
+def new_task(content, year, month, day):
+    global task_list
+    task_list += [Task(content, year, month, day)]
+
+def view_pending_tasks():
+    return [(task.content, task.date)
+            for task in task_list if task.finished is None]
+
+def view_finished_tasks():
+    return [(task.content, task.date)
+            for task in task_list if task.finished is not None]

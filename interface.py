@@ -45,17 +45,6 @@ def menu_decide(opts, choice):
             return option
     print("Got {}! That's kinda wrong, try again.".format(choice))
     menu_decide(main_menu(opts))
-    # if choice == opts[3][0]:
-    #     exit()
-    # elif choice == opts[0][0]:
-    #     add_new_task()
-    # elif choice == opts[1][0]:
-    #     view_pending_tasks()
-    # elif choice == opts[2][0]:
-    #     view_finished_tasks()
-    # else:
-    #     print("Got {}! That's kinda wrong, try again.".format(choice))
-    #     menu_decide(main_menu(opts))
 
 def new_task_dialog():
     print("Creating new task.")
@@ -67,9 +56,9 @@ def new_task_dialog():
 def print_tasks(tasks):
     if tasks == []:
         print("\n  >> No tasks found <<")
-    for task in tasks:
+    for id, task in enumerate(tasks):
         print()
-        print(task[1].strftime("%d %b %Y, %A:"))
+        print("[{}]".format(id), task[1].strftime("%d %b %Y, %A:"))
         print("\t", task[0])
 
 def finished_tasks_menu(opts):
@@ -79,3 +68,14 @@ def finished_tasks_menu(opts):
 def pending_tasks_menu(opts):
     menu(opts, "You are viewing pending tasks")
     return menu_decide(opts, input())
+
+def ask_task():
+    try:
+        return int(input("Which one? Provide number noted in brackets: "))
+    except ValueError:
+        input("That was not a number. Press Return and try again.")
+        return None
+
+def bad_task():
+    print("Task you asked for somehow does not exist. Press Return, check",
+          "the number and try again.")

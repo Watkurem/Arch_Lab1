@@ -19,29 +19,38 @@
 ################################################################################
 
 import datetime
-
+import bisect
 
 class Task:
     def __init__(self, content_, year, month, day):
         self.content = content_
         self.date = datetime.date(year, month, day)
-        self.finished = None
+        self.finished = False
+
+    def __lt__(self, other):
+        return self.date < other.date
 
 # For devtesting
 task_list = [
+    Task("Задача тестова 3", 2016, 3, 1),
     Task("Задача тестова 1", 2016, 3, 2),
     Task("Задача тестова 2", 2016, 3, 3),
-    Task("Задача тестова 3", 2016, 3, 1),
 ]
 
 def new_task(content, year, month, day):
     global task_list
-    task_list += [Task(content, year, month, day)]
+    bisect.insort(task_list, Task(content, year, month, day))
 
 def view_pending_tasks():
     return [(task.content, task.date)
-            for task in task_list if task.finished is None]
+            for task in task_list if not task.finished]
 
 def view_finished_tasks():
     return [(task.content, task.date)
-            for task in task_list if task.finished is not None]
+            for task in task_list if task.finished]
+
+def finish_task(id):
+    task_list[id].finished = True
+
+def unfinish_task(id):
+    task_list[id].finished = False

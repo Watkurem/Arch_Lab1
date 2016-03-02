@@ -38,7 +38,7 @@ def view_pending_tasks():
         ("N", "Add new task", add_new_task),
         ("R", "Remove task", remove_task),
         ("E", "Edit task", edit_task),
-        ("M", "Mark task finished", finished_task),
+        ("M", "Mark task finished", finish_task),
         ("F", "View finished tasks", view_finished_tasks),
         ("Q", "Quit to main menu", main_menu)
     )
@@ -51,7 +51,7 @@ def view_finished_tasks():
         ("C", "Clear finished tasks", clear_finished_tasks),
         ("R", "Remove task", remove_task),
         ("E", "Edit task", edit_task),
-        ("M", "Mark task pending", pending_task),
+        ("M", "Mark task pending", unfinish_task),
         ("L", "View pending tasks", view_pending_tasks),
         ("Q", "Quit to main menu", main_menu)
     )
@@ -60,20 +60,26 @@ def view_finished_tasks():
     interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
 
 def remove_task():
-    pass
+    interface.ask_task()
 
 def edit_task():
-    pass
+    interface.ask_task()
 
-def finished_task():
-    pass
+def finish_task():
+    try:
+        engine.finish_task(interface.ask_task())
+    except TypeError:
+        pass
+    except IndexError:
+        interface.bad_task()
+    view_pending_tasks()
 
 def main_menu():
     MAIN_MENU_OPTS = (
         ("N", "Add new task", add_new_task),
         ("L", "View pending tasks", view_pending_tasks),
         ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit", quit)
+        ("Q", "Quit", quit_debug) # REPLACE WITH ACTUAL QUIT LATER
     )
 
     interface.main_menu(MAIN_MENU_OPTS)[2]()
@@ -81,7 +87,16 @@ def main_menu():
 def clear_finished_tasks():
     pass
 
-def pending_task():
+def unfinish_task():
+    try:
+        engine.unfinish_task(interface.ask_task())
+    except TypeError:
+        print("Huh?")
+    except IndexError:
+        interface.bad_task()
+    view_finished_tasks()
+
+def quit_debug():
     pass
 
 if __name__=="__main__":

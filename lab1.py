@@ -28,7 +28,8 @@ import engine
 
 def main():
     interface.welcome()
-    main_menu()
+    view_pending_tasks()
+    # main_menu()
 
 def add_new_task():
     engine.new_task(*interface.new_task_dialog())
@@ -36,34 +37,48 @@ def add_new_task():
 def view_pending_tasks():
     PENDING_TASK_OPTS = (
         ("N", "Add new task", add_new_task),
-        ("R", "Remove task", remove_task),
-        ("E", "Edit task", edit_task),
+        ("R", "Remove task", remove_pending_task),
+        ("E", "Edit task", edit_pending_task),
         ("M", "Mark task finished", finish_task),
         ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit to main menu", main_menu)
+        ("Q", "Quit", quit_debug)
     )
 
-    interface.print_tasks(engine.view_pending_tasks())
+    interface.print_pending_tasks(engine.view_pending_tasks())
     interface.pending_tasks_menu(PENDING_TASK_OPTS)[2]()
 
 def view_finished_tasks():
     FINISHED_TASK_OPTS = (
         ("C", "Clear finished tasks", clear_finished_tasks),
-        ("R", "Remove task", remove_task),
-        ("E", "Edit task", edit_task),
+        ("R", "Remove task", remove_finished_task),
+        ("E", "Edit task", edit_finished_task),
         ("M", "Mark task pending", unfinish_task),
         ("L", "View pending tasks", view_pending_tasks),
-        ("Q", "Quit to main menu", main_menu)
+        ("Q", "Quit", quit_debug)
     )
 
-    interface.print_tasks(engine.view_finished_tasks())
+    interface.print_finished_tasks(engine.view_finished_tasks())
     interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
 
-def remove_task():
-    interface.ask_task()
+def remove_finished_task():
+    engine.remove_finished_task(interface.ask_task())
+    view_finished_tasks()
 
-def edit_task():
-    interface.ask_task()
+def edit_finished_task():
+    choice = interface.ask_task()
+    args = interface.edit_task_dialog(choice)
+    engine.edit_finished_task(choice, *args)
+    view_finished_tasks()
+
+def remove_pending_task():
+    engine.remove_pending_task(interface.ask_task())
+    view_pending_tasks()
+
+def edit_pending_task():
+    choice = interface.ask_task()
+    args = interface.edit_task_dialog(choice)
+    engine.edit_pending_task(choice, *args)
+    view_pending_tasks()
 
 def finish_task():
     try:
@@ -74,24 +89,25 @@ def finish_task():
         interface.bad_task()
     view_pending_tasks()
 
-def main_menu():
-    MAIN_MENU_OPTS = (
-        ("N", "Add new task", add_new_task),
-        ("L", "View pending tasks", view_pending_tasks),
-        ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit", quit_debug) # REPLACE WITH ACTUAL QUIT LATER
-    )
+# def main_menu():
+#     MAIN_MENU_OPTS = (
+#         ("N", "Add new task", add_new_task),
+#         ("L", "View pending tasks", view_pending_tasks),
+#         ("F", "View finished tasks", view_finished_tasks),
+#         ("Q", "Quit", quit_debug) # REPLACE WITH ACTUAL QUIT LATER
+#     )
 
-    interface.main_menu(MAIN_MENU_OPTS)[2]()
+#     interface.main_menu(MAIN_MENU_OPTS)[2]()
 
 def clear_finished_tasks():
-    pass
+    engine.clear_finished_tasks()
+    view_finished_tasks()
 
 def unfinish_task():
     try:
         engine.unfinish_task(interface.ask_task())
     except TypeError:
-        print("Huh?")
+        pass
     except IndexError:
         interface.bad_task()
     view_finished_tasks()

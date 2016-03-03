@@ -23,7 +23,7 @@ import locale
 locale.setlocale(locale.LC_ALL, "uk_UA.utf8")
 
 def welcome():
-    print("Welcome to the Arch_Lab1 task planner!")
+    print("  \x1b[1mWelcome to the Arch_Lab1 task planner!\x1b[0m")
 
 def main_menu(opts):
     menu(opts, "\tMain menu")
@@ -47,19 +47,40 @@ def menu_decide(opts, choice):
     menu_decide(main_menu(opts))
 
 def new_task_dialog():
-    print("Creating new task.")
+    print("Creating new task. It will be marked as pending.")
+    return task_input()
+
+def task_input():
     content = input("Task description: ")
     date = input('Date (use "YYYY-MM-DD" format or similar ' +
                  'with single character delimiters): ')
-    return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))
+    try:
+        return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))
+    except ValueError:
+        return (content, None, None, None)
 
-def print_tasks(tasks):
+def print_finished_tasks(tasks):
+    print_tasks(tasks, True)
+
+def print_pending_tasks(tasks):
+    print_tasks(tasks, False)
+
+def print_tasks(tasks, finished):
+    print("=" * 80)
     if tasks == []:
-        print("\n  >> No tasks found <<")
-    for id, task in enumerate(tasks):
-        print()
-        print("[{}]".format(id), task[1].strftime("%d %b %Y, %A:"))
-        print("\t", task[0])
+        print("\t>> No tasks found <<")
+    else:
+        for id, task in enumerate(tasks):
+            print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"), end="")
+            if not finished:
+                if task[1] < task[1].today():
+                    print(" \x1b[1;31m<< !!OVERDUE!!\x1b[0m", end="")
+                if task[1] == task[1].today():
+                    print(" \x1b[1;32m<< Today!\x1b[0m", end="")
+            print()
+            print("  {}".format(task[0]))
+            print()
+        print("\x1b[A", end="")
 
 def finished_tasks_menu(opts):
     menu(opts, "You are viewing finished tasks")
@@ -77,5 +98,10 @@ def ask_task():
         return None
 
 def bad_task():
-    print("Task you asked for somehow does not exist. Press Return, check",
+    input("Task you asked for somehow does not exist. Press Return, check " +
           "the number and try again.")
+
+def edit_task_dialog(id):
+    print("Editing task {}.".format(id),
+          "Enter new values or press Return to leave unchanged")
+    return task_input()

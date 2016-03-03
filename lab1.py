@@ -32,7 +32,11 @@ def main():
     # main_menu()
 
 def add_new_task():
-    engine.new_task(*interface.new_task_dialog())
+    try:
+        engine.new_task(*interface.new_task_dialog())
+    except TypeError:
+        interface.bad_input()
+    view_pending_tasks()
 
 def view_pending_tasks():
     PENDING_TASK_OPTS = (
@@ -61,23 +65,43 @@ def view_finished_tasks():
     interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
 
 def remove_finished_task():
-    engine.remove_finished_task(interface.ask_task())
+    try:
+        engine.remove_finished_task(interface.ask_task())
+    except TypeError:
+        pass
+    except IndexError:
+        interface.bad_task()
     view_finished_tasks()
 
 def edit_finished_task():
     choice = interface.ask_task()
     args = interface.edit_task_dialog(choice)
-    engine.edit_finished_task(choice, *args)
+    try:
+        engine.edit_finished_task(choice, *args)
+    except TypeError:
+        pass
+    except IndexError:
+        interface.bad_task()
     view_finished_tasks()
 
 def remove_pending_task():
-    engine.remove_pending_task(interface.ask_task())
+    try:
+        engine.remove_pending_task(interface.ask_task())
+    except TypeError:
+        pass
+    except IndexError:
+        interface.bad_task()
     view_pending_tasks()
 
 def edit_pending_task():
     choice = interface.ask_task()
     args = interface.edit_task_dialog(choice)
-    engine.edit_pending_task(choice, *args)
+    try:
+        engine.edit_pending_task(choice, *args)
+    except TypeError:
+        pass
+    except IndexError:
+        interface.bad_task()
     view_pending_tasks()
 
 def finish_task():

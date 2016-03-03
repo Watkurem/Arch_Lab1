@@ -75,7 +75,7 @@ def print_tasks(tasks, finished):
             if not finished:
                 if task[1] < task[1].today():
                     print(" \x1b[1;31m<< !!OVERDUE!!\x1b[0m", end="")
-                if task[1] == task[1].today():
+                elif task[1] == task[1].today():
                     print(" \x1b[1;32m<< Today!\x1b[0m", end="")
             print()
             print("  {}".format(task[0]))
@@ -100,6 +100,9 @@ def ask_task():
 def bad_task():
     input("Task you asked for somehow does not exist. Press Return, check " +
           "the number and try again.")
+
+def bad_input():
+    input("You entered something we did not expect. Press Return and try again.")
 
 def edit_task_dialog(id):
     print("Editing task {}.".format(id),

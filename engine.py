@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
+###############################################################################
 # Copyright 2015 Alexander Melnyk / Олександр Мельник
 #
 # This file is part of Arch_Lab1 package.
@@ -12,14 +12,16 @@
 #
 # Arch_Lab1 is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
 #
 # You should have received a copy of the GNU General Public License along with
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
-################################################################################
+###############################################################################
 
 import datetime
 import bisect
+
 
 class Task:
     def __init__(self, content_, year, month, day):
@@ -50,17 +52,21 @@ pending_task_list.sort()
 finished_task_list = []
 finished_task_list.sort()
 
+
 def new_task(content, year, month, day):
     global pending_task_list
     bisect.insort(pending_task_list, Task(content, year, month, day))
+
 
 def view_pending_tasks():
     return [(task.content, task.date)
             for task in pending_task_list]
 
+
 def view_finished_tasks():
     return [(task.content, task.date)
             for task in finished_task_list]
+
 
 def finish_task(id):
     global pending_task_list
@@ -68,17 +74,21 @@ def finish_task(id):
 
     bisect.insort(finished_task_list, pending_task_list.pop(id))
 
+
 def unfinish_task(id):
     global pending_task_list
     global finished_task_list
 
     bisect.insort(pending_task_list, finished_task_list.pop(id))
 
+
 def remove_finished_task(id):
     remove_task(id, True)
 
+
 def remove_pending_task(id):
     remove_task(id, False)
+
 
 def remove_task(id, finished):
     if finished:
@@ -86,11 +96,14 @@ def remove_task(id, finished):
     else:
         pending_task_list.pop(id)
 
+
 def edit_finished_task(id, content, year, month, day):
     edit_task(id, content, year, month, day, True)
 
+
 def edit_pending_task(id, content, year, month, day):
     edit_task(id, content, year, month, day, False)
+
 
 def edit_task(id, content, year, month, day, finished):
     if finished:
@@ -103,6 +116,7 @@ def edit_task(id, content, year, month, day, finished):
             pending_task_list[id].content = content
         if year is not None and month is not None and day is not None:
             pending_task_list[id].date = datetime.date(year, month, day)
+
 
 def clear_finished_tasks():
     global finished_task_list

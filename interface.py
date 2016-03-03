@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
+###############################################################################
 # Copyright 2015 Alexander Melnyk / Олександр Мельник
 #
 # This file is part of Arch_Lab1 package.
@@ -12,24 +12,61 @@
 #
 # Arch_Lab1 is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+# FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+# details.
 #
 # You should have received a copy of the GNU General Public License along with
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
-################################################################################
+###############################################################################
+"""Arch_Lab1 terminal interface.
+
+This module is a terminal interface for the Arch_Lab1 program. You probably
+should not be importing it from interpreter.
+"""
 
 import locale
 
 locale.setlocale(locale.LC_ALL, "uk_UA.utf8")
 
+
 def welcome():
+    """Print welcome message.
+
+    >>> welcome()
+      \x1b[1mWelcome to the Arch_Lab1 task planner!\x1b[0m
+    """
     print("  \x1b[1mWelcome to the Arch_Lab1 task planner!\x1b[0m")
 
+
 def main_menu(opts):
+    """Provide main menu.
+
+    Prints options determined by argument and allows user to choose one.
+
+    opts: list of lists which have at least two elements - (descriptor,
+          option), both string - and each represent menu item.
+
+    return: element of opts that user have chosen.
+    """
     menu(opts, "\tMain menu")
     return menu_decide(opts, input())
 
+
 def menu(opts, title):
+    """Provide generic menu.
+
+    Prints options determined by argument under title determined by argument.
+
+    opts: list of lists which have at least two elements - (descriptor,
+          option), both string - and each represent menu item.
+    title: title for the menu, string.
+
+    >>> menu([["1", "Test menu item"]], "Blah menu")
+    ================================================================================
+    Blah menu
+      [1] Test menu item
+
+    """
     print("=" * 80,
           "\n",
           title,
@@ -37,7 +74,12 @@ def menu(opts, title):
     for option in opts:
         print("  [{}] {}".format(option[0], option[1]))
 
+
 def menu_decide(opts, choice):
+    """
+    >>>
+
+    """
     print("\x1b[A", " " * 80, "\x1b[A", sep="")
     choice = choice.upper()
     for option in opts:
@@ -46,11 +88,21 @@ def menu_decide(opts, choice):
     print("Got {}! That's kinda wrong, try again.".format(choice))
     menu_decide(main_menu(opts))
 
+
 def new_task_dialog():
+    """
+    >>>
+
+    """
     print("Creating new task. It will be marked as pending.")
     return task_input()
 
+
 def task_input():
+    """
+    >>>
+
+    """
     content = input("Task description: ")
     date = input('Date (use "YYYY-MM-DD" format or similar ' +
                  'with single character delimiters): ')
@@ -59,19 +111,35 @@ def task_input():
     except ValueError:
         return (content, None, None, None)
 
+
 def print_finished_tasks(tasks):
+    """
+    >>>
+
+    """
     print_tasks(tasks, True)
 
+
 def print_pending_tasks(tasks):
+    """
+    >>>
+
+    """
     print_tasks(tasks, False)
 
+
 def print_tasks(tasks, finished):
+    """
+    >>>
+
+    """
     print("=" * 80)
     if tasks == []:
         print("\t>> No tasks found <<")
     else:
         for id, task in enumerate(tasks):
-            print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"), end="")
+            print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"),
+                  end="")
             if not finished:
                 if task[1] < task[1].today():
                     print(" \x1b[1;31m<< !!OVERDUE!!\x1b[0m", end="")
@@ -82,29 +150,60 @@ def print_tasks(tasks, finished):
             print()
         print("\x1b[A", end="")
 
+
 def finished_tasks_menu(opts):
+    """
+    >>>
+
+    """
     menu(opts, "You are viewing finished tasks")
     return menu_decide(opts, input())
 
+
 def pending_tasks_menu(opts):
+    """
+    >>>
+
+    """
     menu(opts, "You are viewing pending tasks")
     return menu_decide(opts, input())
 
+
 def ask_task():
+    """
+    >>>
+
+    """
     try:
         return int(input("Which one? Provide number noted in brackets: "))
     except ValueError:
         input("That was not a number. Press Return and try again.")
         return None
 
+
 def bad_task():
+    """
+    >>>
+
+    """
     input("Task you asked for somehow does not exist. Press Return, check " +
           "the number and try again.")
 
+
 def bad_input():
-    input("You entered something we did not expect. Press Return and try again.")
+    """
+    >>>
+
+    """
+    input("You entered something we did not expect." +
+          "Press Return and try again.")
+
 
 def edit_task_dialog(id):
+    """
+    >>>
+
+    """
     print("Editing task {}.".format(id),
           "Enter new values or press Return to leave unchanged")
     return task_input()

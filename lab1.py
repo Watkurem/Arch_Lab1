@@ -21,54 +21,98 @@
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
+"""Arch_Lab1 main module ("controller"). Run this as a script or import and
+run main().
+
+All functions are interactive and probably should not be run directly (only via
+main()). Exact behaviour of each function depends on interface ("view") and
+engine ("model") that implement them, but an attempt was made to describe
+generally expected behaviour.
+"""
+
 import interface
 import engine
 
 
 def main():
+    """Entry point for program.
+
+    Displays welcome message and switches to pending task view.
+    Start Arch_Lab1 by calling this function.
+    """
     interface.welcome()
     view_pending_tasks()
-    # main_menu()
 
 
 def add_new_task():
+    """Add new task interactively.
+
+    Task will be marked pending by default. After task is added returns to the
+    pending task view.
+    """
     try:
         engine.new_task(*interface.new_task_dialog())
-    except TypeError:
+    except (TypeError, ValueError):
         interface.bad_input()
 
     view_pending_tasks()
 
 
 def view_pending_tasks():
+    """Provides interactive view of pending tasks.
+
+    Pending means that task is not yet done. Tasks will be sorted by date from
+    earliest to latest; tasks that are overdue (dated earlier than current
+    date, but still pending) and tasks scheduled for current date will be
+    marked accordingly.
+    """
     PENDING_TASK_OPTS = (
         ("N", "Add new task", add_new_task),
         ("R", "Remove task", remove_pending_task),
         ("E", "Edit task", edit_pending_task),
         ("M", "Mark task finished", finish_task),
         ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit", quit_debug)
+        ("Q", "Quit", quit)
     )
 
     interface.print_pending_tasks(engine.view_pending_tasks())
-    interface.pending_tasks_menu(PENDING_TASK_OPTS)[2]()
+    try:
+        interface.pending_tasks_menu(PENDING_TASK_OPTS)[2]()
+    except TypeError:
+        interface.bad_input()
+        view_pending_tasks()
 
 
 def view_finished_tasks():
+    """Provides interactive view of finished tasks.
+
+    Finished means task is done. Tasks will be sorted by date from earliest to
+    latest.
+    """
     FINISHED_TASK_OPTS = (
         ("C", "Clear finished tasks", clear_finished_tasks),
         ("R", "Remove task", remove_finished_task),
         ("E", "Edit task", edit_finished_task),
         ("M", "Mark task pending", unfinish_task),
         ("L", "View pending tasks", view_pending_tasks),
-        ("Q", "Quit", quit_debug)
+        ("Q", "Quit", quit)
     )
 
     interface.print_finished_tasks(engine.view_finished_tasks())
-    interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
+    try:
+        interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()
+    except TypeError:
+        interface.bad_input()
+        view_finished_tasks()
 
 
 def remove_finished_task():
+    """Provides interactive way to remove one finished task.
+
+    Finished means task is done. After task is removed returns to the
+    finished task view.
+    """
+
     try:
         engine.remove_finished_task(interface.ask_task())
     except TypeError:
@@ -80,6 +124,11 @@ def remove_finished_task():
 
 
 def edit_finished_task():
+    """Provides interactive way to edit one finished task.
+
+    Finished means task is done. After edits are done returns to the
+    finished task view.
+    """
     choice = interface.ask_task()
     args = interface.edit_task_dialog(choice)
 
@@ -89,11 +138,18 @@ def edit_finished_task():
         pass
     except IndexError:
         interface.bad_task()
+    except ValueError:
+        interface.bad_input()
 
     view_finished_tasks()
 
 
 def remove_pending_task():
+    """Provides interactive way to remove one pending task.
+
+    Pending means task is not yet done. After task is removed returns to the
+    pending task view.
+    """
     try:
         engine.remove_pending_task(interface.ask_task())
     except TypeError:
@@ -105,6 +161,11 @@ def remove_pending_task():
 
 
 def edit_pending_task():
+    """Provides interactive way to edit one pending task.
+
+    Pending means task is not yet done. After edits are done returns to the
+    pending task view.
+    """
     choice = interface.ask_task()
     args = interface.edit_task_dialog(choice)
 
@@ -114,11 +175,19 @@ def edit_pending_task():
         pass
     except IndexError:
         interface.bad_task()
+    except ValueError:
+        interface.bad_input()
 
     view_pending_tasks()
 
 
 def finish_task():
+    """Mark pending task as finished interactively.
+
+    Pending means task is not yet done. Finished means task is done. Afterwards
+    returns to the pending task view.
+    """
+
     try:
         engine.finish_task(interface.ask_task())
     except TypeError:
@@ -130,11 +199,20 @@ def finish_task():
 
 
 def clear_finished_tasks():
+    """Remove all finished tasks.
+
+    Finished means task is done. Afterwards returns to the finished task view.
+    """
     engine.clear_finished_tasks()
     view_finished_tasks()
 
 
 def unfinish_task():
+    """Mark finished task as pending.
+
+    Pending means task is not yet done. Finished means task is done. Afterwards
+    returns to the finished task view.
+    """
     try:
         engine.unfinish_task(interface.ask_task())
     except TypeError:
@@ -144,9 +222,6 @@ def unfinish_task():
 
     view_finished_tasks()
 
-
-def quit_debug():
-    pass
 
 if __name__ == "__main__":
     main()

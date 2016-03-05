@@ -53,6 +53,11 @@ class Task:
         self.date = datetime.date(year, month, day)
 
     def __lt__(self, other):
+        """Task 'less than' comparison.
+
+        Task is deemed less than another Task if it's date is less than
+        another's.
+        """
         return self.date < other.date
 
 # For devtesting
@@ -77,6 +82,22 @@ finished_task_list = []
 finished_task_list.sort()
 
 
+def view_pending_tasks():
+    """Fetch pending tasks.
+
+    Converts pending_task_list from list of Task instances to a list of tuples.
+
+    return: [(string, datetime.date), -||-]
+
+    >>> import engine; \
+    engine.pending_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    view_pending_tasks()
+    [('Test task', datetime.date(2012, 12, 21))]
+    """
+    return [(task.content, task.date)
+            for task in pending_task_list]
+
+
 def new_task(content, year, month, day):
     """Add new task to pending_task_list.
 
@@ -94,89 +115,6 @@ def new_task(content, year, month, day):
     bisect.insort(pending_task_list, Task(content, year, month, day))
 
 
-def view_pending_tasks():
-    """Fetch pending tasks.
-
-    Converts pending_task_list from list of Task instances to a list of tuples.
-
-    return: [(string, datetime.date), -||-]
-
-    >>> import engine; \
-    engine.pending_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    view_pending_tasks()
-    [('Test task', datetime.date(2012, 12, 21))]
-    """
-    return [(task.content, task.date)
-            for task in pending_task_list]
-
-
-def view_finished_tasks():
-    """Fetch finished tasks.
-
-    Converts finished_task_list from list of Task instances to a list of
-    tuples.
-
-    return: [(string, datetime.date), -||-]
-
-    >>> import engine; \
-    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    view_finished_tasks()
-    [('Test task', datetime.date(2012, 12, 21))]
-    """
-    return [(task.content, task.date)
-            for task in finished_task_list]
-
-
-def finish_task(id):
-    """Move task from pending_task_list to finished_task_list.
-
-    id: int - descriptor, namely id of task in a list.
-
-    >>> import engine; \
-    engine.pending_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    engine.finished_task_list = []; \
-    finish_task(0); \
-    [engine.pending_task_list, engine.finished_task_list[0].content]
-    [[], 'Test task']
-    """
-    global pending_task_list
-    global finished_task_list
-
-    bisect.insort(finished_task_list, pending_task_list.pop(id))
-
-
-def unfinish_task(id):
-    """Move task from finished_task_list to pending_task_list.
-
-    id: int - descriptor, namely id of task in a list.
-
-    >>> import engine; \
-    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    engine.pending_task_list = []; \
-    unfinish_task(0); \
-    [engine.finished_task_list, engine.pending_task_list[0].content]
-    [[], 'Test task']
-    """
-    global pending_task_list
-    global finished_task_list
-
-    bisect.insort(pending_task_list, finished_task_list.pop(id))
-
-
-def remove_finished_task(id):
-    """Remove task from finished_task_list.
-
-    id: int - descriptor, namely id of task in a list.
-
-    >>> import engine; \
-    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    remove_finished_task(0); \
-    engine.finished_task_list
-    []
-    """
-    finished_task_list.pop(id)
-
-
 def remove_pending_task(id):
     """Remove task from pending_task_list.
 
@@ -189,29 +127,6 @@ def remove_pending_task(id):
     []
     """
     pending_task_list.pop(id)
-
-
-def edit_finished_task(id, content, year, month, day):
-    """Edit task from finished_task_list.
-
-    Replaces fields. Can also be implemented as 'delete, then add'.
-
-    id: int - descriptor, namely id of task in a list.
-    content: string - task description.
-    year: int - year task is scheduled on.
-    month: int - month task is scheduled on.
-    day: int - day task is scheduled on.
-
-    >>> import engine; \
-    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
-    edit_finished_task(0, "Test edit", 9999, 1, 1); \
-    [engine.finished_task_list[0].content, engine.finished_task_list[0].date]
-    ['Test edit', datetime.date(9999, 1, 1)]
-    """
-    if content != "":
-        finished_task_list[id].content = content
-    if year is not None and month is not None and day is not None:
-        finished_task_list[id].date = datetime.date(year, month, day)
 
 
 def edit_pending_task(id, content, year, month, day):
@@ -237,6 +152,41 @@ def edit_pending_task(id, content, year, month, day):
         pending_task_list[id].date = datetime.date(year, month, day)
 
 
+def finish_task(id):
+    """Move task from pending_task_list to finished_task_list.
+
+    id: int - descriptor, namely id of task in a list.
+
+    >>> import engine; \
+    engine.pending_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    engine.finished_task_list = []; \
+    finish_task(0); \
+    [engine.pending_task_list, engine.finished_task_list[0].content]
+    [[], 'Test task']
+    """
+    global pending_task_list
+    global finished_task_list
+
+    bisect.insort(finished_task_list, pending_task_list.pop(id))
+
+
+def view_finished_tasks():
+    """Fetch finished tasks.
+
+    Converts finished_task_list from list of Task instances to a list of
+    tuples.
+
+    return: [(string, datetime.date), -||-]
+
+    >>> import engine; \
+    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    view_finished_tasks()
+    [('Test task', datetime.date(2012, 12, 21))]
+    """
+    return [(task.content, task.date)
+            for task in finished_task_list]
+
+
 def clear_finished_tasks():
     """Clear finished task list.
 
@@ -250,3 +200,58 @@ def clear_finished_tasks():
     """
     global finished_task_list
     finished_task_list = []
+
+
+def remove_finished_task(id):
+    """Remove task from finished_task_list.
+
+    id: int - descriptor, namely id of task in a list.
+
+    >>> import engine; \
+    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    remove_finished_task(0); \
+    engine.finished_task_list
+    []
+    """
+    finished_task_list.pop(id)
+
+
+def edit_finished_task(id, content, year, month, day):
+    """Edit task from finished_task_list.
+
+    Replaces fields. Can also be implemented as 'delete, then add'.
+
+    id: int - descriptor, namely id of task in a list.
+    content: string - task description.
+    year: int - year task is scheduled on.
+    month: int - month task is scheduled on.
+    day: int - day task is scheduled on.
+
+    >>> import engine; \
+    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    edit_finished_task(0, "Test edit", 9999, 1, 1); \
+    [engine.finished_task_list[0].content, engine.finished_task_list[0].date]
+    ['Test edit', datetime.date(9999, 1, 1)]
+    """
+    if content != "":
+        finished_task_list[id].content = content
+    if year is not None and month is not None and day is not None:
+        finished_task_list[id].date = datetime.date(year, month, day)
+
+
+def unfinish_task(id):
+    """Move task from finished_task_list to pending_task_list.
+
+    id: int - descriptor, namely id of task in a list.
+
+    >>> import engine; \
+    engine.finished_task_list = [engine.Task("Test task", 2012, 12, 21)]; \
+    engine.pending_task_list = []; \
+    unfinish_task(0); \
+    [engine.finished_task_list, engine.pending_task_list[0].content]
+    [[], 'Test task']
+    """
+    global pending_task_list
+    global finished_task_list
+
+    bisect.insort(pending_task_list, finished_task_list.pop(id))

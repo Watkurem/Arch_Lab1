@@ -181,14 +181,6 @@ def print_pending_tasks(tasks):
     <BLANKLINE>
     \x1b[A
 
-    >>> print_pending_tasks([["Test task", datetime.date.today()]]) \
-    # doctest: +NORMALIZE_WHITESPACE
-    ================================================================================
-    [0]	 04 Mar 2016, Friday: \x1b[1;32m<< Today!\x1b[0m
-      Test task
-    <BLANKLINE>
-    \x1b[A
-
     >>> print_pending_tasks([]) # doctest: +NORMALIZE_WHITESPACE
     ================================================================================
     \t>> No tasks found <<

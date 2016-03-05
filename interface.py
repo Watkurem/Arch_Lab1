@@ -56,10 +56,7 @@ def menu(opts, title):
       [1] Test menu item
 
     """
-    print("=" * 80,
-          "\n",
-          title,
-          sep="")
+    print("=" * 80, "\n", title, sep="")
     for option in opts:
         print("  [{}] {}".format(option[0], option[1]))
 
@@ -96,34 +93,34 @@ def menu_decide(opts, choice):
     return None
 
 
-def new_task_dialog():
-    """Provide interactive dialog for adding new task.
+def print_tasks(tasks, finished):
+    """Print tasks.
 
-    Prints status and calls task_input().
+    Prints tasks as formatted list. Date displayed according to locale.
+    In 'pending' mode also marks tasks as 'overdue' or 'today'.
 
-    return: (str, int, int, int) if date read correctly,
-            (str, None, None, None) if date not read correctly.
+    tasks: ((string, datetime.date), -||-)
+    finished: boolean. True  => 'finished' mode
+                       False => 'pending' mode
+
+    All branches tested in print_pending_tasks(), print_finished_tasks()
     """
-    print("Creating new task. It will be marked as pending.")
-    return task_input()
-
-
-def task_input():
-    """Provide interactive dialog for task input.
-
-    Used to add and edit tasks. Will ask user for task description (any string)
-    and date in YYYY-MM-DD (with any single character delimiters).
-
-    return: (str, int, int, int) if date read correctly,
-            (str, None, None, None) if date not read correctly.
-    """
-    content = input("Task description: ")
-    date = input('Date (use "YYYY-MM-DD" format or similar ' +
-                 'with single character delimiters): ')
-    try:
-        return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))
-    except ValueError:
-        return (content, None, None, None)
+    print("=" * 80)
+    if tasks == []:
+        print("\t>> No tasks found <<")
+    else:
+        for id, task in enumerate(tasks):
+            print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"),
+                  end="")
+            if not finished:
+                if task[1] < task[1].today():
+                    print(" \x1b[1;31m<< !!OVERDUE!!\x1b[0m", end="")
+                elif task[1] == task[1].today():
+                    print(" \x1b[1;32m<< Today!\x1b[0m", end="")
+            print()
+            print("  {}".format(task[0]))
+            print()
+        print("\x1b[A", end="")
 
 
 def print_finished_tasks(tasks):
@@ -148,6 +145,21 @@ def print_finished_tasks(tasks):
     \t>> No tasks found <<
     """
     print_tasks(tasks, True)
+
+
+def finished_tasks_menu(opts):
+    """Provide interactive finished tasks menu.
+
+    Prints options determined by argument and allows user to choose one.
+
+    opts: list of lists which have at least two elements - (descriptor,
+          option), both string - and each represent menu item.
+          ((string, string, ...), -||-)
+
+    return: element of opts that was chosen by user.
+    """
+    menu(opts, "You are viewing finished tasks")
+    return menu_decide(opts, input())
 
 
 def print_pending_tasks(tasks):
@@ -184,51 +196,6 @@ def print_pending_tasks(tasks):
     print_tasks(tasks, False)
 
 
-def print_tasks(tasks, finished):
-    """Print tasks.
-
-    Prints tasks as formatted list. Date displayed according to locale.
-    In 'pending' mode also marks tasks as 'overdue' or 'today'.
-
-    tasks: ((string, datetime.date), -||-)
-    finished: boolean. True  => 'finished' mode
-                       False => 'pending' mode
-
-    All branches tested in print_pending_tasks(), print_finished_tasks()
-    """
-    print("=" * 80)
-    if tasks == []:
-        print("\t>> No tasks found <<")
-    else:
-        for id, task in enumerate(tasks):
-            print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"),
-                  end="")
-            if not finished:
-                if task[1] < task[1].today():
-                    print(" \x1b[1;31m<< !!OVERDUE!!\x1b[0m", end="")
-                elif task[1] == task[1].today():
-                    print(" \x1b[1;32m<< Today!\x1b[0m", end="")
-            print()
-            print("  {}".format(task[0]))
-            print()
-        print("\x1b[A", end="")
-
-
-def finished_tasks_menu(opts):
-    """Provide interactive finished tasks menu.
-
-    Prints options determined by argument and allows user to choose one.
-
-    opts: list of lists which have at least two elements - (descriptor,
-          option), both string - and each represent menu item.
-          ((string, string, ...), -||-)
-
-    return: element of opts that was chosen by user.
-    """
-    menu(opts, "You are viewing finished tasks")
-    return menu_decide(opts, input())
-
-
 def pending_tasks_menu(opts):
     """Provide interactive pending tasks menu.
 
@@ -260,6 +227,49 @@ def ask_task():
         return None
 
 
+def task_input():
+    """Provide interactive dialog for task input.
+
+    Used to add and edit tasks. Will ask user for task description (any string)
+    and date in YYYY-MM-DD (with any single character delimiters).
+
+    return: (str, int, int, int) if date read correctly,
+            (str, None, None, None) if date not read correctly.
+    """
+    content = input("Task description: ")
+    date = input('Date (use "YYYY-MM-DD" format or similar ' +
+                 'with single character delimiters): ')
+    try:
+        return (content, int(date[:4]), int(date[5:7]), int(date[8:10]))
+    except ValueError:
+        return (content, None, None, None)
+
+
+def new_task_dialog():
+    """Provide interactive dialog for adding new task.
+
+    Prints status and calls task_input().
+
+    return: (str, int, int, int) if date read correctly,
+            (str, None, None, None) if date not read correctly.
+    """
+    print("Creating new task. It will be marked as pending.")
+    return task_input()
+
+
+def edit_task_dialog(id):
+    """Provide interactive dialog for adding new task.
+
+    Prints status and calls task_input().
+
+    return: (str, int, int, int) if date read correctly,
+            (str, None, None, None) if date not read correctly.
+    """
+    print("Editing task {}.".format(id),
+          "Enter new values or press Return to leave unchanged")
+    return task_input()
+
+
 def bad_task():
     """Inform user that task is not there interactively.
 
@@ -277,16 +287,3 @@ def bad_input():
     """
     input("You entered something we did not expect. " +
           "Press Return and try again.")
-
-
-def edit_task_dialog(id):
-    """Provide interactive dialog for adding new task.
-
-    Prints status and calls task_input().
-
-    return: (str, int, int, int) if date read correctly,
-            (str, None, None, None) if date not read correctly.
-    """
-    print("Editing task {}.".format(id),
-          "Enter new values or press Return to leave unchanged")
-    return task_input()

@@ -30,6 +30,16 @@ finished_task_list: list of finished tasks.
 
 import datetime
 import bisect
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
+try:
+    config['DEFAULT']['savemethod']
+except KeyError:
+    config['DEFAULT']['savemethod'] = 'none'
+
+print(config['DEFAULT']['savemethod'])
 
 
 class Task:

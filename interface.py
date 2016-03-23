@@ -279,3 +279,14 @@ def bad_input():
     """
     input("You entered something we did not expect. " +
           "Press Return and try again.")
+
+
+def save_dialog():
+    """
+    """
+    print('Your task list was edited. Do you wish to save changes?')
+    choice = input('"N" for "No", any key for "Yes": ')
+    if choice.upper() == 'N':
+        return False
+    else:
+        return True

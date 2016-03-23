@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ###############################################################################
-# Copyright 2015 Alexander Melnyk / Олександр Мельник
+# Copyright 2016 Alexander Melnyk / Олександр Мельник
 #
 # This file is part of Arch_Lab1 package.
 #

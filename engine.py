@@ -34,18 +34,22 @@ import bisect
 import configparser
 
 
+# class SaveFail(Exception):
+#     pass
+
+
 config = configparser.ConfigParser()
 config.read('config.ini')
 try:
     config['DEFAULT']['savemethod']
 except KeyError:
-    config['DEFAULT']['savemethod'] = 'none'
+    config['DEFAULT']['savemethod'] = 'pickle'
 
 # print(config['DEFAULT']['savemethod'])
 
-if config['DEFAULT']['savemethod'] == 'none':
-    file_backend = False
-elif config['DEFAULT']['savemethod'] == 'pickle':
+# if config['DEFAULT']['savemethod'] == 'none':
+#     file_backend = None
+if config['DEFAULT']['savemethod'] == 'pickle':
     import pickle_backend as file_backend
 elif config['DEFAULT']['savemethod'] == 'json':
     import json_backend as file_backend
@@ -284,4 +288,7 @@ def unfinish_task(id):
 def save_tasks():
     """
     """
+    # try:
     file_backend.save((pending_task_list, finished_task_list))
+    # except AttributeError:
+    #     raise SaveFail("No save method selected")

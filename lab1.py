@@ -220,14 +220,20 @@ def unfinish_task():
 def shutdown():
     """
     """
+    # try:
     save_dialog()
+    # except engine.SaveFail:
+    #     interface.no_save_method_error()
+    #     view_config()
+    # else:
     sys.exit()
 
 
 def save_dialog():
     """
     """
-    engine.save(interface.save_dialog())
+    if interface.save_dialog():
+        engine.save_tasks()
 
 
 if __name__ == "__main__":

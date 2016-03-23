@@ -290,3 +290,9 @@ def save_dialog():
         return False
     else:
         return True
+
+
+# def no_save_method_error():
+#     """
+#     """
+#     print('You tried to save your tasks, but forgot to choose how ')

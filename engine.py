@@ -37,6 +37,9 @@ import configparser
 # class SaveFail(Exception):
 #     pass
 
+AVAILABLE_SAVEMETHODS =(('pickle', 'simple python-based object file format'),
+                        ('json', 'JavaScript object notation'),
+                        ('yaml', 'YAML file format'))
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -292,3 +295,7 @@ def save_tasks():
     file_backend.save((pending_task_list, finished_task_list))
     # except AttributeError:
     #     raise SaveFail("No save method selected")
+def get_available_savemethods():
+    """
+    """
+    return AVAILABLE_SAVEMETHODS

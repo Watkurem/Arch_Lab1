@@ -295,7 +295,23 @@ def save_tasks():
     file_backend.save((pending_task_list, finished_task_list))
     # except AttributeError:
     #     raise SaveFail("No save method selected")
+
+
+def get_savemethod():
+    """
+    """
+    return config['DEFAULT']['savemethod']
+
+
 def get_available_savemethods():
     """
     """
     return AVAILABLE_SAVEMETHODS
+
+
+def set_savemethod(method):
+    """
+    """
+    config['DEFAULT']['savemethod'] = method
+    with open('config.ini', 'w') as fil:
+        config.write(fil)

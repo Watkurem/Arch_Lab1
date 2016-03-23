@@ -33,6 +33,7 @@ generally expected behaviour.
 
 import interface
 import engine
+import sys
 
 
 def main():
@@ -58,7 +59,7 @@ def view_pending_tasks():
         ("E", "Edit task", edit_pending_task),
         ("M", "Mark task finished", finish_task),
         ("F", "View finished tasks", view_finished_tasks),
-        ("Q", "Quit", quit)
+        ("Q", "Quit", shutdown)
     )
 
     interface.print_pending_tasks(engine.view_pending_tasks())
@@ -145,7 +146,7 @@ def view_finished_tasks():
         ("E", "Edit task", edit_finished_task),
         ("M", "Mark task pending", unfinish_task),
         ("L", "View pending tasks", view_pending_tasks),
-        ("Q", "Quit", quit)
+        ("Q", "Quit", shutdown)
     )
 
     interface.print_finished_tasks(engine.view_finished_tasks())
@@ -214,6 +215,12 @@ def unfinish_task():
         interface.bad_task()
 
     view_finished_tasks()
+
+
+def shutdown():
+    """
+    """
+    sys.exit()
 
 
 if __name__ == "__main__":

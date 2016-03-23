@@ -28,9 +28,11 @@ pending_task_list: list of pending tasks.
 finished_task_list: list of finished tasks.
 """
 
+import sys
 import datetime
 import bisect
 import configparser
+
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -39,7 +41,19 @@ try:
 except KeyError:
     config['DEFAULT']['savemethod'] = 'none'
 
-print(config['DEFAULT']['savemethod'])
+# print(config['DEFAULT']['savemethod'])
+
+if config['DEFAULT']['savemethod'] == 'none':
+    file_backend = False
+elif config['DEFAULT']['savemethod'] == 'pickle':
+    import pickle_backend as file_backend
+elif config['DEFAULT']['savemethod'] == 'json':
+    import json_backend as file_backend
+elif config['DEFAULT']['savemethod'] == 'yaml':
+    import yaml_backend as file_backend
+else:
+    print('WARNING: Config is broken!')
+    sys.exit(1)
 
 
 class Task:

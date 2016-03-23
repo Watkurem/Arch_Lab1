@@ -296,3 +296,21 @@ def save_dialog():
 #     """
 #     """
 #     print('You tried to save your tasks, but forgot to choose how ')
+
+
+def config_menu(current, available):
+    """
+    """
+    print("=" * 80)
+    print('The program is currently configured to save in', current, 'format.'+
+          ' If you wish to change that, available values are:')
+    for x in available:
+        print(' ', x[0], '-', x[1] + '.')
+    print()
+    choice = input('Enter new value: ')
+    if choice in {x[0] for x in available}:
+        return choice
+    else:
+        input('Wrong input. Configuration will not be changed. ' +
+              'Press Return and try again.')
+        return current

@@ -265,3 +265,9 @@ def unfinish_task(id):
     global finished_task_list
 
     bisect.insort(pending_task_list, finished_task_list.pop(id))
+
+
+def save_tasks():
+    """
+    """
+    file_backend.save((pending_task_list, finished_task_list))

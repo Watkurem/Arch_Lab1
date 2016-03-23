@@ -236,5 +236,13 @@ def save_dialog():
         engine.save_tasks()
 
 
+def view_config():
+    """
+    """
+    tmp = interface.config_menu(engine.get_savemethod(),
+                                engine.get_available_savemethods())
+    engine.set_savemethod(tmp)
+
+
 if __name__ == "__main__":
     main()

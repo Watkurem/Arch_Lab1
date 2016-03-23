@@ -59,6 +59,7 @@ def view_pending_tasks():
         ("E", "Edit task", edit_pending_task),
         ("M", "Mark task finished", finish_task),
         ("F", "View finished tasks", view_finished_tasks),
+        ("C", "Edit configuration", view_config_pending),
         ("Q", "Quit", shutdown)
     )
 
@@ -135,6 +136,13 @@ def finish_task():
     view_pending_tasks()
 
 
+def view_config_pending():
+    """
+    """
+    view_config()
+    view_pending_tasks()
+
+
 def view_finished_tasks():
     """Provides interactive view of finished tasks.
 
@@ -146,6 +154,7 @@ def view_finished_tasks():
         ("E", "Edit task", edit_finished_task),
         ("M", "Mark task pending", unfinish_task),
         ("L", "View pending tasks", view_pending_tasks),
+        ("C", "Edit configuration", view_config_finished),
         ("Q", "Quit", shutdown)
     )
 
@@ -214,6 +223,13 @@ def unfinish_task():
     except IndexError:
         interface.bad_task()
 
+    view_finished_tasks()
+
+
+def view_config_finished():
+    """
+    """
+    view_config()
     view_finished_tasks()
 
 

@@ -248,7 +248,7 @@ def shutdown():
 def save_dialog():
     """
     """
-    if interface.save_dialog():
+    if engine.changes_detected() and interface.save_dialog():
         engine.save_tasks()
 
 

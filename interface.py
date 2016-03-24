@@ -287,10 +287,7 @@ def save_dialog():
     print('Your task list differs from the one on disk. Do you wish to save',
           'changes?')
     choice = input('"N" for "No", any key for "Yes": ')
-    if choice.upper() == 'N':
-        return False
-    else:
-        return True
+    return choice.upper() != 'N'
 
 
 # def no_save_method_error():

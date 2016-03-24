@@ -18,3 +18,20 @@
 # You should have received a copy of the GNU General Public License along with
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
+
+import pickle
+
+def save(target, item):
+    """
+    """
+    with open(target, 'wb') as fil:
+        pickle.dump(item, fil)
+
+def load(target):
+    """
+    """
+    try:
+        with open(target, 'rb') as fil:
+            return pickle.load(fil)
+    except (FileNotFoundError, EOFError):
+        return ([], [])

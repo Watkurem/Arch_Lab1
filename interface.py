@@ -305,9 +305,11 @@ def config_menu(current, available):
     for x in available:
         print(' ', x[0], '-', x[1] + '.')
     print()
-    choice = input('Enter new value: ')
+    choice = input('Enter new value (press Return to keep current one): ')
     if choice in {x[0] for x in available}:
         return choice
+    elif choice == '':
+        return current
     else:
         input('Wrong input. Configuration will not be changed. ' +
               'Press Return and try again.')

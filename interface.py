@@ -282,7 +282,9 @@ def bad_input():
 
 
 def save_dialog():
-    """
+    """Provide interactive dialog for saving tasks.
+
+    return: boolean - user's choice
     """
     print('Your task list differs from the one on disk. Do you wish to save',
           'changes?')
@@ -297,7 +299,15 @@ def save_dialog():
 
 
 def config_menu(current, available):
-    """
+    """Provide interactive serialization configuration menu.
+
+    current: string - method currently used for serialization.
+    available: seq of two-item seqs ((string, string), -||-), where first item
+               in every seq is a serialization method and second is it's
+               hopefully helpful description.
+
+    return: string - new serialization method.
+
     """
     print("=" * 80)
     print('The program is currently configured to save in', current, 'format.'+

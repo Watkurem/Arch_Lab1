@@ -308,7 +308,19 @@ def unfinish_task(id):
 
 
 def save_tasks():
-    """
+    """Serialize task lists.
+
+    Will call save function of backend given by configuration for current
+    pending and finished lists and accordingly generated filename.
+
+    >>> import tempfile; import engine; \
+    tmp = tempfile.NamedTemporaryFile(); \
+    savefile = tmp.name; \
+    control = (pending_task_list, finished_task_list); \
+    save_tasks(); \
+    tester = file_backend.load(savefile); \
+    control == tester
+    True
     """
     # try:
     file_backend.save(savefile, (pending_task_list, finished_task_list))
@@ -317,19 +329,37 @@ def save_tasks():
 
 
 def get_savemethod():
-    """
+    """Returns currently used savemethod.
+
+    return: string - currently used savemethod.
+
+    >>> x = get_savemethod(); \
+    x == config['DEFAULT']['savemethod']
+    True
     """
     return config['DEFAULT']['savemethod']
 
 
 def get_available_savemethods():
-    """
+    """Returns savemethods that are currently available
+
+    And their hopefully helpful descriptions.
+
+    return: seq of two-item seqs ((string, string), -||-), where first item
+            in every seq is a serialization method and second is it's
+            hopefully helpful description.
+
+    >>> x = get_available_savemethods(); \
+    x == AVAILABLE_SAVEMETHODS
+    True
     """
     return AVAILABLE_SAVEMETHODS
 
 
 def set_savemethod(method):
-    """
+    """Changes savemethod for the whole program and saves into config file.
+
+    method: string - new savemethod to set.
     """
     global savefile
     global file_backend
@@ -349,7 +379,19 @@ def set_savemethod(method):
 
 
 def changes_detected():
-    """
+    """Answers if task lists changed.
+
+    Does this by comparing current state with the stored one.
+
+    >>> import tempfile; \
+    tmp = tempfile.NamedTemporaryFile(); \
+    file_backend.save(tmp.name, (pending_task_list, finished_task_list)); \
+    x = changes_detected(); \
+    pending_task_list.append("Test"); \
+    y = changes_detected(); \
+    w = pending_task_list.pop(); \
+    (x, y)
+    (False, True)
     """
     return file_backend.load(savefile) != (pending_task_list,
                                            finished_task_list)

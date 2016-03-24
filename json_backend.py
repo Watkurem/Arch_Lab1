@@ -19,6 +19,13 @@
 # Arch_Lab. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
+"""Arch_Lab JSON serialization backend.
+
+This module is a serialization backend for the Arch_Lab program. It exists to
+provide unified serialization interface to json for engine. You probably
+should not be importing it directly.
+"""
+
 import json
 import engine
 import datetime
@@ -31,13 +38,33 @@ class TaskJSONEncoder(json.JSONEncoder):
             return (obj.year, obj.month, obj.day)
 
 def save(target, item):
-    """
+    """Serialize item into filename target. Create file or overwrite.
+
+    target: string - file name.
+    item: any json serializeable python data structure or engine.Task instance
+          or datetime.date instance or any Python data structure containing any
+          combination of those - item to serialize.
+
+    >>> import tempfile; import engine; \
+    tmp = tempfile.NamedTemporaryFile(mode="r+"); \
+    control = ([engine.Task("A", 1, 1, 1)], [engine.Task("B", 1000, 2, 3)]); \
+    save(tmp.name, control); \
+    tester = load(tmp.name); \
+    control == tester
+    True
     """
     with open(target, 'w') as fil:
         json.dump(item, fil, cls = TaskJSONEncoder)
 
 def load(target):
-    """
+    """Deserialize filename target.
+
+    Will return tuple of two empty lists if file does not exist.
+
+    target: string - file name.
+    return: ([engine.Task, -||-], [engine.Task, -||-])
+
+    Tested in save()
     """
     try:
         with open(target, 'r') as fil:

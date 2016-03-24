@@ -4,23 +4,23 @@
 ###############################################################################
 # Copyright 2016 Alexander Melnyk / Олександр Мельник
 #
-# This file is part of Arch_Lab1 package.
+# This file is part of Arch_Lab package.
 #
-# Arch_Lab1 is free software: you can redistribute it and/or modify it under
+# Arch_Lab is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
 # Foundation, either version 3 of the License, or (at your option) any later
 # version.
 #
-# Arch_Lab1 is distributed in the hope that it will be useful, but WITHOUT
+# Arch_Lab is distributed in the hope that it will be useful, but WITHOUT
 # ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
 # FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
 # details.
 #
 # You should have received a copy of the GNU General Public License along with
-# Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
+# Arch_Lab. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
-"""Arch_Lab1 main module ("controller"). Run this as a script or import and
+"""Arch_Lab main module ("controller"). Run this as a script or import and
 run main().
 
 All functions are interactive and probably should not be run directly (only via
@@ -40,7 +40,7 @@ def main():
     """Entry point for program.
 
     Displays welcome message and switches to pending task view.
-    Start Arch_Lab1 by calling this function.
+    Start Arch_Lab by calling this function.
     """
     interface.welcome()
     view_pending_tasks()

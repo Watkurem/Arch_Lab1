@@ -109,24 +109,26 @@ class Task:
             return NotImplemented
 
 # For devtesting
-pending_task_list = [
-    Task("Задача тестова 3", 2016, 3, 1),
-    Task("Задача тестова 1", 2016, 3, 2),
-    Task("Задача тестова 2", 2016, 3, 3),
-    Task("Idle more cards", 2015, 10, 2),
-    Task("Sell cards for funbucks", 2015, 12, 2),
-    Task("Buy game for funbucks", 2015, 12, 10),
-    Task("Idle for even more cards", 2015, 12, 11),
-    Task("Consider selling soul to devil", 2015, 12, 11),
-    Task("Try to strike a deal with angels instead", 2015, 12, 20),
-    Task("Abandon all hope and play HL", 2015, 12, 31),
-    Task("Install Steam", 2012, 5, 29),
-    Task("Try playing some games", 2012, 6, 1),
-    Task("Leave message for sentient races of next universe", 2999, 1, 1),
-]
-pending_task_list.sort()
+# pending_task_list = [
+#     Task("Задача тестова 3", 2016, 3, 1),
+#     Task("Задача тестова 1", 2016, 3, 2),
+#     Task("Задача тестова 2", 2016, 3, 3),
+#     Task("Idle more cards", 2015, 10, 2),
+#     Task("Sell cards for funbucks", 2015, 12, 2),
+#     Task("Buy game for funbucks", 2015, 12, 10),
+#     Task("Idle for even more cards", 2015, 12, 11),
+#     Task("Consider selling soul to devil", 2015, 12, 11),
+#     Task("Try to strike a deal with angels instead", 2015, 12, 20),
+#     Task("Abandon all hope and play HL", 2015, 12, 31),
+#     Task("Install Steam", 2012, 5, 29),
+#     Task("Try playing some games", 2012, 6, 1),
+#     Task("Leave message for sentient races of next universe", 2999, 1, 1),
+# ]
+# finished_task_list = []
 
-finished_task_list = []
+pending_task_list, finished_task_list = file_backend.load(savefile)
+
+pending_task_list.sort()
 finished_task_list.sort()
 
 

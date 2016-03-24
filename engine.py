@@ -91,6 +91,19 @@ class Task:
         """
         return self.date < other.date
 
+    def __hash__(self):
+        """
+        """
+        return hash((self.content, self.date))
+
+    def __eq__(self, other):
+        """
+        """
+        try:
+            return (self.content, self.date) == (other.content, other.date)
+        except AttributeError:
+            return NotImplemented
+
 # For devtesting
 pending_task_list = [
     Task("Задача тестова 3", 2016, 3, 1),
@@ -315,3 +328,11 @@ def set_savemethod(method):
     config['DEFAULT']['savemethod'] = method
     with open('config.ini', 'w') as fil:
         config.write(fil)
+
+
+def changes_detected():
+    """
+    """
+    saved_pending_task_list, saved_finished_task_list = file_backend.load()
+    return (saved_pending_task_list != pending_task_list or
+            saved_finished_task_list != pending_task_list)

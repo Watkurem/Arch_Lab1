@@ -37,9 +37,9 @@ import configparser
 # class SaveFail(Exception):
 #     pass
 
-AVAILABLE_SAVEMETHODS =(('pickle', 'simple python-based object file format'),
-                        ('json', 'JavaScript object notation'),
-                        ('yaml', 'YAML file format'))
+AVAILABLE_SAVEMETHODS = (('pickle', 'simple python-based object file format'),
+                         ('json', 'JavaScript object notation'),
+                         ('yaml', 'YAML file format'))
 SAVEFILE = 'taskstorage'
 
 config = configparser.ConfigParser()

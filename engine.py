@@ -311,7 +311,7 @@ def save_tasks():
     """
     """
     # try:
-    file_backend.save((pending_task_list, finished_task_list))
+    file_backend.save(savefile, (pending_task_list, finished_task_list))
     # except AttributeError:
     #     raise SaveFail("No save method selected")
 

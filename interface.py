@@ -284,7 +284,8 @@ def bad_input():
 def save_dialog():
     """
     """
-    print('Your task list was edited. Do you wish to save changes?')
+    print('Your task list differs from the one on disk. Do you wish to save',
+          'changes?')
     choice = input('"N" for "No", any key for "Yes": ')
     if choice.upper() == 'N':
         return False

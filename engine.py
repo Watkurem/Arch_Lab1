@@ -40,6 +40,7 @@ import configparser
 AVAILABLE_SAVEMETHODS =(('pickle', 'simple python-based object file format'),
                         ('json', 'JavaScript object notation'),
                         ('yaml', 'YAML file format'))
+SAVEFILE = 'taskstorage'
 
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -54,10 +55,13 @@ except KeyError:
 #     file_backend = None
 if config['DEFAULT']['savemethod'] == 'pickle':
     import pickle_backend as file_backend
+    savefile = SAVEFILE + '.pkl'
 elif config['DEFAULT']['savemethod'] == 'json':
     import json_backend as file_backend
+    savefile = SAVEFILE + '.json'
 elif config['DEFAULT']['savemethod'] == 'yaml':
     import yaml_backend as file_backend
+    savefile = SAVEFILE + '.yaml'
 else:
     print('WARNING: Config is broken!')
     sys.exit(1)
@@ -333,6 +337,5 @@ def set_savemethod(method):
 def changes_detected():
     """
     """
-    saved_pending_task_list, saved_finished_task_list = file_backend.load()
-    return (saved_pending_task_list != pending_task_list or
-            saved_finished_task_list != pending_task_list)
+    return file_backend.load(savefile) != (pending_task_list,
+                                           finished_task_list)

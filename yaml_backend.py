@@ -18,3 +18,18 @@
 # You should have received a copy of the GNU General Public License along with
 # Arch_Lab1. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
+
+import yaml
+
+def save(target, item):
+    """
+    """
+    with open(target, 'w') as fil:
+        yaml.dump(item, fil)
+
+def load(target):
+    """
+    """
+    with open(target, 'r') as fil:
+        test = yaml.load(fil)
+        return test if test is not None else ([], [])

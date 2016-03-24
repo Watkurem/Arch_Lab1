@@ -331,9 +331,21 @@ def get_available_savemethods():
 def set_savemethod(method):
     """
     """
+    global savefile
+    global file_backend
+
     config['DEFAULT']['savemethod'] = method
     with open('config.ini', 'w') as fil:
         config.write(fil)
+    if config['DEFAULT']['savemethod'] == 'pickle':
+        import pickle_backend as file_backend
+        savefile = SAVEFILE + '.pkl'
+    elif config['DEFAULT']['savemethod'] == 'json':
+        import json_backend as file_backend
+        savefile = SAVEFILE + '.json'
+    else:
+        import yaml_backend as file_backend
+        savefile = SAVEFILE + '.yaml'
 
 
 def changes_detected():

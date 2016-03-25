@@ -44,8 +44,10 @@ class TaskJSONEncoder(json.JSONEncoder):
         """
         if isinstance(obj, engine.Task):
             return {"__engine.Task__": True, **obj.__dict__}
-        if isinstance(obj, datetime.date):
+        elif isinstance(obj, datetime.date):
             return (obj.year, obj.month, obj.day)
+        else:
+            return JSONEncoder.default(self, obj)
 
 
 def save(target, item):

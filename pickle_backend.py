@@ -28,6 +28,7 @@ should not be importing it directly.
 
 import pickle
 
+
 def save(target, item):
     """Serialize item into filename target. Create file or overwrite.
 
@@ -44,6 +45,7 @@ def save(target, item):
     """
     with open(target, 'wb') as fil:
         pickle.dump(item, fil)
+
 
 def load(target):
     """Deserialize filename target.

@@ -30,12 +30,14 @@ import json
 import engine
 import datetime
 
+
 class TaskJSONEncoder(json.JSONEncoder):
-    def default (self, obj):
+    def default(self, obj):
         if isinstance(obj, engine.Task):
             return {"__engine.Task__": True, **obj.__dict__}
         if isinstance(obj, datetime.date):
             return (obj.year, obj.month, obj.day)
+
 
 def save(target, item):
     """Serialize item into filename target. Create file or overwrite.
@@ -54,7 +56,8 @@ def save(target, item):
     True
     """
     with open(target, 'w') as fil:
-        json.dump(item, fil, cls = TaskJSONEncoder)
+        json.dump(item, fil, cls=TaskJSONEncoder)
+
 
 def load(target):
     """Deserialize filename target.

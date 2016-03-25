@@ -57,6 +57,9 @@ def load(target):
 
     Tested in save()
     """
-    with open(target, 'r') as fil:
-        test = yaml.load(fil)
-        return test if test is not None else ([], [])
+    try:
+        with open(target, 'r') as fil:
+            test = yaml.load(fil)
+    except (FileNotFoundError, EOFError):
+        test = None
+    return test if test is not None else ([], [])

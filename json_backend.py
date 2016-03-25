@@ -32,7 +32,16 @@ import datetime
 
 
 class TaskJSONEncoder(json.JSONEncoder):
+    """Custom encoder to allow serialization of engine.Task and
+    datetime.date
+    """
     def default(self, obj):
+        """Serialize engine.Task and datetime.date into JSON
+
+        Pretty straight and dumb approach, Task into dict with
+        "__engine.Task__": True pair and pairs for other fields, date into a
+        tuple of it's three fields.
+        """
         if isinstance(obj, engine.Task):
             return {"__engine.Task__": True, **obj.__dict__}
         if isinstance(obj, datetime.date):

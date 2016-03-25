@@ -310,8 +310,8 @@ def config_menu(current, available):
 
     """
     print("=" * 80)
-    print('The program is currently configured to save in', current, 'format.'+
-          ' If you wish to change that, available values are:')
+    print('The program is currently configured to save in', current,
+          'format. If you wish to change that, available values are:')
     for x in available:
         print(' ', x[0], '-', x[1] + '.')
     print()

@@ -78,7 +78,8 @@ def load(target):
     target: string - file name.
     return: ([engine.Task, -||-], [engine.Task, -||-])
 
-    Tested in save()
+    >>> load("/im an idiot and store this file in root")
+    ([], [])
     """
     try:
         with open(target, 'r') as fil:

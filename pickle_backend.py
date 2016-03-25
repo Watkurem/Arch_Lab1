@@ -55,7 +55,8 @@ def load(target):
     target: string - file name.
     return: any Python data structure or ([], [])
 
-    Tested in save()
+    >>> load("/im an idiot and store this file in root")
+    ([], [])
     """
     try:
         with open(target, 'rb') as fil:

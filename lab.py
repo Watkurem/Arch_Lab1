@@ -149,7 +149,7 @@ def view_finished_tasks():
     Tasks will be sorted by date from earliest to latest.
     """
     FINISHED_TASK_OPTS = (
-        ("C", "Clear finished tasks", clear_finished_tasks),
+        ("W", "Wipe finished tasks", clear_finished_tasks),
         ("R", "Remove task", remove_finished_task),
         ("E", "Edit task", edit_finished_task),
         ("M", "Mark task pending", unfinish_task),

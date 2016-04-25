@@ -21,6 +21,7 @@
 
 import lab
 import sys
+import argparse
 
 
 class SimpleController(lab.Controller):
@@ -239,3 +240,55 @@ class SimpleController(lab.Controller):
                   self.engine.get_available_savemethods())
         tmp = self.interface.config_menu(t1, t2)
         self.engine.set_savemethod(tmp)
+
+
+class ArgumentController(SimpleController):
+    """Controller implementation for Arch_Lab.
+
+    Extends SimpleController with command line argument functionality.
+    """
+    def run(self):
+        """Execution should normally start here.
+
+        If there were no arguments, displays welcome message and switches to
+        pending task view.
+        Otherwise processes arguments.
+        """
+        if len(sys.argv) > 1:
+            self.process_args()
+        else:
+            super().run()
+
+    def process_args(self):
+        """Process arguments.
+
+        Provides support for the following arguments:
+        -h, --help      show help message and exit
+        -a, --add       switch to task add dialogue
+        -r, --remove    switch to task removal dialogue
+        -e, --edit      switch to task edit dialogue
+        -m, --mfinish   switch to finish task dialogue
+        -f, --finished  switch to finished view
+        -c, --config    switch to config dialogue
+        """
+        parser = argparse.ArgumentParser()
+        group = parser.add_mutually_exclusive_group()
+        group.add_argument("-a", "--add", action='store_true')
+        group.add_argument("-r", "--remove", action='store_true')
+        group.add_argument("-e", "--edit", action='store_true')
+        group.add_argument("-m", "--mfinish", action='store_true')
+        group.add_argument("-f", "--finished", action='store_true')
+        group.add_argument("-c", "--config", action='store_true')
+        args = parser.parse_args()
+        if args.add:
+            self.add_new_task()
+        elif args.remove:
+            self.remove_pending_task()
+        elif args.edit:
+            self.edit_pending_task()
+        elif args.mfinish:
+            self.finish_task()
+        elif args.finished:
+            self.view_finished_tasks()
+        elif args.config:
+            self.view_config_pending()

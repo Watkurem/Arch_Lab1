@@ -272,7 +272,110 @@ class Controller():
     def save_dialog(self):
         """Provide interactive way to save tasks on exit."""
         raise NotImplementedError()
+
+
+class Interface():
+    """Abstract class/interface for interface implementations for Arch_Lab.
+
+    An interface should implement all of these to be usable.
     """
+    def __init__(self):
+        if type(self) is Interface:
+            raise TypeError("Interface should not be instantiated")
+
+    def welcome():
+        """Provide welcome message."""
+        raise NotImplementedError()
+
+    def print_finished_tasks(tasks):
+        """Provide view of finished tasks.
+
+        tasks: ((string, datetime.date), -||-)
+        """
+        raise NotImplementedError()
+
+    def finished_tasks_menu(opts):
+        """Provide interactive finished tasks menu.
+
+        opts: list of lists which have at least two elements - (descriptor,
+              option), both string - and each represent menu item.
+              ((string, string, ...), -||-)
+
+        return: element of opts that was chosen by user.
+        """
+        raise NotImplementedError()
+
+    def print_pending_tasks(tasks):
+        """Provide view of pending tasks.
+
+        tasks: ((string, datetime.date), -||-)
+        """
+        raise NotImplementedError()
+
+    def pending_tasks_menu(opts):
+        """Provide interactive pending tasks menu.
+
+        opts: list of lists which have at least two elements - (descriptor,
+              option), both string - and each represent menu item.
+              ((string, string, ...), -||-)
+
+        return: element of opts that was chosen by user.
+        """
+        raise NotImplementedError()
+
+    def ask_task():
+        """Ask for a task descriptor.
+
+        return: int - task descriptor, as input by user.
+        """
+        raise NotImplementedError()
+
+    def new_task_dialog():
+        """Provide interactive dialog for adding new task.
+
+        return: (content, year, month, day)
+                (str, int, int, int) if date read correctly. If any part of
+                date was read incorrectly, that part (or all three parts) may
+                be replaced with None.
+        """
+        raise NotImplementedError()
+
+    def edit_task_dialog(id):
+        """Provide interactive dialog for editing a task.
+
+        return: (content, year, month, day)
+                (str, int, int, int) if date read correctly. If any part of
+                date was read incorrectly, that part (or all three parts) may
+                be replaced with None.
+        """
+        raise NotImplementedError()
+
+    def bad_task():
+        """Inform user that task is not there interactively."""
+        raise NotImplementedError()
+
+    def bad_input():
+        """Inform user that they menace to crash the program with their input.
+        """
+        raise NotImplementedError()
+
+    def save_dialog():
+        """Provide interactive dialog for saving tasks.
+
+        return: boolean - user's choice"""
+        raise NotImplementedError()
+
+    def config_menu(current, available):
+        """Provide interactive serialization configuration menu.
+
+        current: string - method currently used for serialization.
+        available: seq of two-item seqs ((string, string), -||-), where first
+                   item in every seq is a serialization method and second is
+                   it's hopefully helpful description.
+
+        return: string - new serialization method.
+        """
+        raise NotImplementedError()
 
 
 if __name__ == "__main__":

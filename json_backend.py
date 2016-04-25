@@ -31,65 +31,58 @@ import engine
 import datetime
 
 
-class TaskJSONEncoder(json.JSONEncoder):
-    """Custom encoder to allow serialization of engine.Task and
-    datetime.date
-    """
-    def default(self, obj):
-        """Serialize engine.Task and datetime.date into JSON
+class JsonFileBackend(engine.FileBackend):
+    """FileBackend implementation for JSON format.
 
-        Pretty straight and dumb approach, Task into dict with
-        "__engine.Task__": True pair and pairs for other fields, date into a
-        tuple of it's three fields.
+    Provides unified serialization interface to json for EngineConfig.
+
+    A very poor implementation seeing how JSON in Python is so problematic.
+    Does not conform to interface in behaviour. Use at your own risk.
+    """
+    class TaskJSONEncoder(json.JSONEncoder):
+        """Custom encoder to allow serialization of engine.Task and
+        datetime.date
         """
-        if isinstance(obj, engine.Task):
-            return {"__engine.Task__": True, **obj.__dict__}
-        elif isinstance(obj, datetime.date):
-            return (obj.year, obj.month, obj.day)
-        else:
-            return JSONEncoder.default(self, obj)
+        def default(self, obj):
+            """Serialize engine.Task and datetime.date into JSON
 
+            Pretty straight and dumb approach, Task into dict with
+            "__engine.Task__": True pair and pairs for other fields, date into
+            a tuple of it's three fields.
+            """
+            if isinstance(obj, engine.Task):
+                return {"__engine.Task__": True, **obj.__dict__}
+            elif isinstance(obj, datetime.date):
+                return (obj.year, obj.month, obj.day)
 
-def save(target, item):
-    """Serialize item into filename target. Create file or overwrite.
+    def save(target, item):
+        """Serialize item into filename target. Create file or overwrite.
 
-    target: string - file name.
-    item: any json serializeable python data structure or engine.Task instance
-          or datetime.date instance or any Python data structure containing any
-          combination of those - item to serialize.
+        target: string - file name.
+        item: any json serializeable python data structure or engine.Task
+              instance or datetime.date instance or any Python data structure
+              containing any combination of those - item to serialize.
+        """
+        with open(target, 'w') as fil:
+            json.dump(item, fil, cls=JsonFileBackend.TaskJSONEncoder)
 
-    >>> import tempfile; import engine; \
-    tmp = tempfile.NamedTemporaryFile(mode="r+"); \
-    control = ([engine.Task("A", 1, 1, 1)], [engine.Task("B", 1000, 2, 3)]); \
-    save(tmp.name, control); \
-    tester = load(tmp.name); \
-    control == tester
-    True
-    """
-    with open(target, 'w') as fil:
-        json.dump(item, fil, cls=TaskJSONEncoder)
+    def load(target):
+        """Deserialize filename target into two lists of Tasks.
 
+        Will return tuple of two empty lists if file does not exist.
 
-def load(target):
-    """Deserialize filename target.
-
-    Will return tuple of two empty lists if file does not exist.
-
-    target: string - file name.
-    return: ([engine.Task, -||-], [engine.Task, -||-])
-
-    >>> load("/im an idiot and store this file in root")
-    ([], [])
-    """
-    try:
-        with open(target, 'r') as fil:
-            tmp1, tmp2 = json.load(fil)
-            tmp1 = [engine.Task(x['content'],
-                                x['date'][0], x['date'][1], x['date'][2])
-                    for x in tmp1 if '__engine.Task__' in x.keys()]
-            tmp2 = [engine.Task(x['content'],
-                                x['date'][0], x['date'][1], x['date'][2])
-                    for x in tmp2 if '__engine.Task__' in x.keys()]
-            return (tmp1, tmp2)
-    except (FileNotFoundError, json.decoder.JSONDecodeError):
-        return ([], [])
+        target: string - file name.
+        return: ([engine.Task, -||-], [engine.Task, -||-])
+        """
+        try:
+            with open(target, 'r') as fil:
+                tmp1, tmp2 = json.load(fil)
+                tmp1 = [engine.Task(x['content'],
+                                    x['date'][0], x['date'][1], x['date'][2])
+                        for x in tmp1 if '__engine.Task__' in x.keys()]
+                tmp2 = [engine.Task(x['content'],
+                                    x['date'][0], x['date'][1], x['date'][2])
+                        for x in tmp2 if '__engine.Task__' in x.keys()]
+                return (tmp1, tmp2)
+        except (FileNotFoundError, json.decoder.JSONDecodeError):
+            return ([], [])

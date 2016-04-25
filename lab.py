@@ -80,9 +80,89 @@ import sys
 
 
 
+class Controller():
+    """Abstract class/interface for controller implementations for Arch_Lab.
 
+    A controller should implement all of these to be usable.
 
+    Attributes:
+      interface - Interface descendant.
+      engine - Engine descendand instance.
     """
+    def __init__(self, _interface, _engine):
+        """Initialize self.
+
+        _interface: Interface descendant - interface to be used.
+        _engine: Engine descendant - engine to be used.
+        """
+        if type(self) is Controller:
+            raise TypeError("Controller should not be instantiated")
+        self.interface = _interface
+        self.engine = _engine
+
+    def run(self):
+        """Execution should normally start here."""
+        raise NotImplementedError()
+
+    def view_pending_tasks(self):
+        """Provide interactive view of pending tasks."""
+        raise NotImplementedError()
+
+    def add_new_task(self):
+        """Add new task interactively."""
+        raise NotImplementedError()
+
+    def remove_pending_task(self):
+        """Provide interactive way to remove one pending task."""
+        raise NotImplementedError()
+
+    def edit_pending_task(self):
+        """Provide interactive way to edit one pending task."""
+        raise NotImplementedError()
+
+    def finish_task(self):
+        """Mark pending task as finished interactively."""
+        raise NotImplementedError()
+
+    def view_config_pending(self):
+        """Provide interactive configuration.
+
+        As accessed from the view of pending tasks."""
+        raise NotImplementedError()
+
+    def view_finished_tasks(self):
+        """Provide interactive view of finished tasks."""
+        raise NotImplementedError()
+
+    def clear_finished_tasks(self):
+        """Remove all finished tasks."""
+        raise NotImplementedError()
+
+    def remove_finished_task(self):
+        """Provide interactive way to remove one finished task."""
+        raise NotImplementedError()
+
+    def edit_finished_task(self):
+        """Provide interactive way to edit one finished task."""
+        raise NotImplementedError()
+
+    def unfinish_task(self):
+        """Mark finished task as pending."""
+        raise NotImplementedError()
+
+    def view_config_finished(self):
+        """Provide interactive configuration.
+
+        As accessed from the view of finished tasks."""
+        raise NotImplementedError()
+
+    def shutdown(self):
+        """Execution should normally end here."""
+        raise NotImplementedError()
+
+    def save_dialog(self):
+        """Provide interactive way to save tasks on exit."""
+        raise NotImplementedError()
     """
 
 

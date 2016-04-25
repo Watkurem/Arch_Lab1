@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XMI xmi.version="1.2" verified="false" timestamp="2016-04-25T12:48:32" xmlns:UML="http://schema.omg.org/spec/UML/1.3">
+ <XMI.header>
+  <XMI.documentation>
+   <XMI.exporter>umbrello uml modeller http://umbrello.kde.org</XMI.exporter>
+   <XMI.exporterVersion>1.6.10</XMI.exporterVersion>
+   <XMI.exporterEncoding>UnicodeUTF8</XMI.exporterEncoding>
+  </XMI.documentation>
+  <XMI.metamodel xmi.version="1.3" xmi.name="UML" href="UML.xml"/>
+ </XMI.header>
+ <XMI.content>
+  <UML:Model isAbstract="false" isRoot="false" xmi.id="m1" isSpecification="false" name="UML Model" isLeaf="false">
+   <UML:Namespace.ownedElement>
+    <UML:Stereotype namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="folder" isSpecification="false" name="folder" isLeaf="false"/>
+    <UML:Stereotype namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="datatype" isSpecification="false" name="datatype" isLeaf="false"/>
+    <UML:Stereotype namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="class-or-package" isSpecification="false" name="class-or-package" isLeaf="false"/>
+    <UML:Model namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="Logical View" isSpecification="false" name="Logical View" isLeaf="false">
+     <UML:Namespace.ownedElement>
+      <UML:Package namespace="Logical View" visibility="public" stereotype="folder" isAbstract="false" isRoot="false" xmi.id="Datatypes" isSpecification="false" name="Datatypes" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="MlZPnAg1EIfq" isSpecification="false" name="int" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="zfj4QNYkl50y" isSpecification="false" name="char" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="Wi2fD3nZmMwX" isSpecification="false" name="bool" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="VaYjsDZqqHuG" isSpecification="false" name="float" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="cQyMWzK2fKfs" isSpecification="false" name="double" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="NSP9nJeItDzj" isSpecification="false" name="short" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="OXZFoRTOsSiM" isSpecification="false" name="long" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="P1O4L2whSJoF" isSpecification="false" name="unsigned int" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="cTVTgVC20mFm" isSpecification="false" name="unsigned short" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="BhA37tPWsmaD" isSpecification="false" name="unsigned long" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="mUuEnjSPCvsq" isSpecification="false" name="string" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="O2sOm8AypL1w" isSpecification="false" name="array" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="CPQ4B0FvUA7F" isSpecification="false" name="tuple" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="rXc3TStrUjGH" isSpecification="false" name="dict" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="pOFehEYtdyvm" isSpecification="false" name="object" isLeaf="false"/>
+        <UML:DataType namespace="Datatypes" visibility="public" stereotype="datatype" isAbstract="false" isRoot="false" xmi.id="w9hOJpd8MDBn" isSpecification="false" name="set" isLeaf="false"/>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="XCs2VvqexGxk" isSpecification="false" parent="f2fAltRbHeDz" name="" discriminator="" child="jOO9yiXmvgnG"/>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="ZWHDVQNoQbCb" isSpecification="false" parent="p1jnDMvwqmL7" name="" discriminator="" child="YPVbDhXp1yg2"/>
+      <UML:Class namespace="Logical View" visibility="public" stereotype="class-or-package" isAbstract="false" isRoot="false" xmi.id="WMzZMLY8qf6c" isSpecification="false" name="engine" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="WMzZMLY8qf6c" visibility="public" isAbstract="false" isRoot="false" xmi.id="p1jnDMvwqmL7" isSpecification="false" name="EngineConfig" comment="This class is intended to provide an unified configuration reading&#xa;    __init__ for other engines.&#xa;    Attributes:&#xa;      savefile - name of file in which tasks should be serialized. Is&#xa;                 controlled by SAVEFILE variable&#xa;      file_backend - FileBackend descendant that provides save/load&#xa;                     functionality.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="olVaFZNm8aye"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Attribute visibility="public" xmi.id="2qY1Hhja9km9" isSpecification="false" name="savefile" type="mUuEnjSPCvsq"/>
+          <UML:Attribute visibility="public" xmi.id="DuN4WJ7X7dYM" isSpecification="false" name="file_backend" type="WIo0YXAJq9hz"/>
+          <UML:Attribute visibility="public" xmi.id="V3Tcf0yyFtOF" isSpecification="false" name="config" type="avJcoNhl4OYj"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="ulaYebOsYAwF" isSpecification="false" name="__init__" comment="Initialize self.&#xa;        Sets up file_backend as specified by config and savefile. Savefile&#xa;        extensions are hard-coded and savemethod-dependent, and file name is&#xa;        taken from SAVEFILE.&#xa;        Reads config parameter 'savemethod' and chooses file backend as&#xa;        follows to be stored as self.file_backend:&#xa;          pickle - pickle_backend.PickleFileBackend&#xa;          json - json_backend.JsonFileBackend&#xa;          yaml - yaml_backend.YamlFileBackend&#xa;        Will output an error message and finish the program if 'savemethod' is&#xa;        anything else.&#xa;        If 'savemethod' is not specified in config, pickle is chosen as&#xa;        default.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="IAXAN6WFp6lR" isSpecification="false" name="get_savemethod" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="fAJEKFRaKnqb" type="mUuEnjSPCvsq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="fOVbpXx6gSG3" isSpecification="false" name="get_available_savemethods" comment="Get savemethods that are currently available.&#xa;        And their hopefully helpful descriptions. Available savemethods are&#xa;        specified by AVAILABLE_SAVEMETHODS variable.&#xa;        return: seq of two-item seqs ((string, string), -||-), where first item&#xa;                in every seq is a savemethod and second is it's hopefully&#xa;                helpful description.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="YkGLo1mUB6gU" type="xK91HwLuV8qw" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="J72esqDYEi92" isSpecification="false" name="set_savemethod" comment="Change employed savemethod.&#xa;        Sets savefile and file_backend to new values and writes new savemethod&#xa;        into config.&#xa;        method: string - new savemethod to set.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="E48uWMv45BNr" isSpecification="false" name="method" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="eMTq3bsHfy9C" isSpecification="false" name="changes_detected" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="L2EOBcFLkZd0" type="Wi2fD3nZmMwX" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="WMzZMLY8qf6c" visibility="public" isAbstract="false" isRoot="false" xmi.id="YPVbDhXp1yg2" isSpecification="false" name="ListEngine" comment="Engine implementation for Arch_Lab.&#xa;    Extends EngineConfig with actual data management functionality.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="ZWHDVQNoQbCb"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Attribute visibility="public" xmi.id="vPbLdXI8ZjiE" isSpecification="false" name="pending_task_list" type="Ot4H84otNQDP"/>
+          <UML:Attribute visibility="public" xmi.id="tNyvlWehvF2W" isSpecification="false" name="finished_task_list" type="jl8iTtAjniPF"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="mjOCJamS0fMw" isSpecification="false" name="__init__" comment="Initialize self with tasks stored previously.&#xa;        Will call load function of self.file backend given by configuration for&#xa;        current pending and finished lists and accordingly generated filename.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="nkru5DVrvt2E" isSpecification="false" name="view_pending_tasks" comment="Fetch pending tasks.&#xa;        Returns the list of stored pending tasks as a list of tuples.&#xa;        return: [(string, datetime.date), -||-]&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="UmeSR0OaEoio" type="pOFehEYtdyvm" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="KxRT95Bun2os" isSpecification="false" name="new_task" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="DJi8DkKfUz5t" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="eJWmYTWyaaHe" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="qQUHUuP8Dvuj" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="5c5cyzAoQc4s" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="jwxsjRFFEEEx" isSpecification="false" name="remove_pending_task" comment="Remove task from the list of pending tasks.&#xa;        Will crash if task does not exist. Make sure you verify existence.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="4CUXZeVeEZFD" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="Qnpc24aL9C8Y" isSpecification="false" name="edit_pending_task" comment="Edit a task in the list of pending tasks.&#xa;        If content is &quot;&quot;, description will not change. If either of year,&#xa;        month or date is None, all three of them will not change.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;        content: string - new task description.&#xa;        year: int - new year task is scheduled on.&#xa;        month: int - new month task is scheduled on.&#xa;        day: int - new day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="fbWyi7BlKeIt" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="TweKxCvO0k02" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="eUY5IkuwJOuz" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="w5p2gX9L1fOI" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="Pcm9nCBhG1jw" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="Aorp4zRY2N1n" isSpecification="false" name="finish_task" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="9FfHea63AsCv" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="sETsZSfqw1ZD" isSpecification="false" name="view_finished_tasks" comment="Fetch finished tasks.&#xa;        Returns the list of stored finished tasks as a list of tuples.&#xa;        return: [(string, datetime.date), -||-]&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="oTgYuO1HjyKW" type="pOFehEYtdyvm" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="3OUuJHn9VG12" isSpecification="false" name="clear_finished_tasks" comment="Remove all finished tasks.&#xa;        List of finished tasks will be empty after this.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="s01ZwL6xjar0" isSpecification="false" name="remove_finished_task" comment="Remove task from the list of finished tasks.&#xa;        Will crash if task does not exist. Make sure you verify existence.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="6BV0D3VKGAbs" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="bzsJYhJQKRlB" isSpecification="false" name="edit_finished_task" comment="Edit a task in the list of finished tasks.&#xa;        If content is &quot;&quot;, description will not change. If either of year,&#xa;        month or date is None, all three of them will not change.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;        content: string - new task description.&#xa;        year: int - new year task is scheduled on.&#xa;        month: int - new month task is scheduled on.&#xa;        day: int - new day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="e7YlcuMh3rhE" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="qccmsUhSRXlz" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="ybvNxp5ZubLV" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="QVOCOGWLpRim" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="EpOWdgIIhU12" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="OP7rOv9qRuiT" isSpecification="false" name="unfinish_task" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="7rzOSCze0NAd" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="Cg6dam4xIlp3" isSpecification="false" name="save_tasks" comment="Serialize task lists.&#xa;        Will serialize tasks using a FileBackend descendant. Refer to&#xa;        EngineConfig for details.&#xa;" isLeaf="false"/>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="WMzZMLY8qf6c" visibility="public" isAbstract="true" isRoot="false" xmi.id="WIo0YXAJq9hz" isSpecification="false" name="FileBackend" isLeaf="false">
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="3q9p1lbhVgKl" isSpecification="false" name="__init__" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="cnxE7LuAJEjw" isSpecification="false" name="save" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="r2vFjViBhJHT" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="c09PnmkPZgef" isSpecification="false" name="item" value="" type="pOFehEYtdyvm"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="1WpIiYDYZ8lI" isSpecification="false" name="load" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="bTRJljkNjtkU" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="WMzZMLY8qf6c" visibility="public" isAbstract="false" isRoot="false" xmi.id="JBZAP6QbmWEL" isSpecification="false" name="Task" comment="Simple Task class.&#xa;    Sortable.&#xa;    content: string - task description.&#xa;    date: datetime.date - date task is scheduled on.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="ksQh4d0UfjWQ"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Attribute visibility="public" xmi.id="OftsjKIsoDaV" isSpecification="false" name="content" type="mUuEnjSPCvsq"/>
+          <UML:Attribute visibility="public" xmi.id="wJK871ukS2xs" isSpecification="false" name="date" type="tC3EPtflWYdG"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="GHIZ28c9on1M" isSpecification="false" name="__init__" comment="Initialize Task instance.&#xa;        content: string - task description.&#xa;        year: int - year task is scheduled on.&#xa;        month: int - month task is scheduled on.&#xa;        day: int - day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="bNDAAC2RLbcl" isSpecification="false" name="content_" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="R1os3liuvl6K" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="Asl8JsDit1au" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="mA5Ner7ojqw0" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="0R8IuYkYydV0" isSpecification="false" name="__lt__" comment="Task 'less than' comparison.&#xa;        Task is deemed less than another Task if it's date is less than&#xa;        another's.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="fG6nIHbJhiZb" type="Wi2fD3nZmMwX" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="PjOyHW2mGRQj" isSpecification="false" name="other" value="" type="TSb5PNnbZLNx"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="EH7DucD1nugz" isSpecification="false" name="__hash__" comment="Return hash(self).&#xa;        Task's hash will be same as (Task.content, Task.date).&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="mMkdqqVV4bGN" type="MlZPnAg1EIfq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="rseYaB9oSFzK" isSpecification="false" name="__eq__" comment="Return self == other.&#xa;        Tasks are deemed equal if both their fields are equal. As for now, Task&#xa;        instance can't be compared with anything except objects that quack like&#xa;        another Task instance, and attempt to compare with something else will&#xa;        raise a NotImplementedError exception.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="8zdDbuYSkAyK" type="Wi2fD3nZmMwX" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="Z7G8Qe3nLPka" isSpecification="false" name="other" value="" type="TSb5PNnbZLNx"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="J76lK63AGPnL" isSpecification="false" name="__repr__" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="NNCffgnngPyF" type="mUuEnjSPCvsq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Class>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="Sohk7fxb1u9L" isSpecification="false" parent="WIo0YXAJq9hz" name="" discriminator="" child="nJ1O8I7kKJxC"/>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="U2VTTj3aXC9y" isSpecification="false" parent="WIo0YXAJq9hz" name="" discriminator="" child="AB4jyvpwSus7"/>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="wGhwne77bpEJ" isSpecification="false" parent="WIo0YXAJq9hz" name="" discriminator="" child="zRGTdLXXldbO"/>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="Pbtiojdvb0PA" isSpecification="false" parent="cqiRSgrcyYtS" name="" discriminator="" child="f2fAltRbHeDz"/>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="doxbPOHZ1TFl" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="QC7pdjzi6SXJ" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="f2fAltRbHeDz"/>
+        <UML:AssociationEnd visibility="public" xmi.id="gn8Kx7AZt7AJ" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="WIo0YXAJq9hz"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Dependency namespace="Logical View" visibility="public" client="f2fAltRbHeDz" xmi.id="CCJ3GXCS8FI6" isSpecification="false" name="" supplier="WIo0YXAJq9hz"/>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="WbBBoAhMyPnN" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="JGDBlOhjF5L3" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="f2fAltRbHeDz"/>
+        <UML:AssociationEnd visibility="public" xmi.id="KqNeiHEDtNOh" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="YBYKyA7HEr16"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="Y53UTpqm33vn" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="PdUcgnf0d0cJ" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="f2fAltRbHeDz"/>
+        <UML:AssociationEnd visibility="public" xmi.id="IpWBCtqiwrBP" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="X2HCj4cP58Yd"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="meLNfvgvkB6v" isSpecification="false" parent="X2HCj4cP58Yd" name="" discriminator="" child="JUf1cdJviPg3"/>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="olVaFZNm8aye" isSpecification="false" parent="YBYKyA7HEr16" name="" discriminator="" child="p1jnDMvwqmL7"/>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="oxnbZQoeTU6X" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="bgNTknYNaO6w" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="WIo0YXAJq9hz"/>
+        <UML:AssociationEnd visibility="public" xmi.id="CU5Tlr6Xor6O" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="p1jnDMvwqmL7"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="Hu0jN6EylbSV" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="OyqwKwsUPxxA" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="p1jnDMvwqmL7"/>
+        <UML:AssociationEnd visibility="public" xmi.id="p2fdtlz9dxq0" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="WIo0YXAJq9hz"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="2Tujvvk0xUFQ" isSpecification="false" name="lab" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="2Tujvvk0xUFQ" visibility="public" isAbstract="true" isRoot="false" xmi.id="cqiRSgrcyYtS" isSpecification="false" name="Controller" comment="Abstract class/interface for controller implementations for Arch_Lab.&#xa;    A controller should implement all of these to be usable.&#xa;    Attributes:&#xa;      interface - Interface descendant.&#xa;      engine - Engine descendand instance.&#xa;" isLeaf="false">
+         <UML:Classifier.feature>
+          <UML:Attribute visibility="public" xmi.id="umK8DipgWUwJ" isSpecification="false" name="interface" type="X2HCj4cP58Yd"/>
+          <UML:Attribute visibility="public" xmi.id="7hWdBSwWzR9j" isSpecification="false" name="engine" type="YBYKyA7HEr16"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="zjq4y7ys3TTn" isSpecification="false" name="__init__" comment="Initialize self.&#xa;        _interface: Interface descendant - interface to be used.&#xa;        _engine: Engine descendant - engine to be used.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="cUgexARnh4lo" type="mUuEnjSPCvsq" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="wV4xZpAaeKPf" isSpecification="false" name="_interface" value="" type="X2HCj4cP58Yd"/>
+            <UML:Parameter visibility="private" xmi.id="RCb8lKkinndN" isSpecification="false" name="_engine" value="" type="YBYKyA7HEr16"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="TeWiEdNVZei4" isSpecification="false" name="run" comment="Execution should normally start here." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="GZAybvk4XGkk" isSpecification="false" name="view_pending_tasks" comment="Provide interactive view of pending tasks." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="xefRlmo1Jyzu" isSpecification="false" name="add_new_task" comment="Add new task interactively." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="Eg2XdCiapNza" isSpecification="false" name="remove_pending_task" comment="Provide interactive way to remove one pending task." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="vz3gIG9XwB2X" isSpecification="false" name="edit_pending_task" comment="Provide interactive way to edit one pending task." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="pz28EvM9uPnA" isSpecification="false" name="finish_task" comment="Mark pending task as finished interactively." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="EGm3XRYMRYTf" isSpecification="false" name="view_config_pending" comment="Provide interactive configuration.&#xa;As accessed from the view of pending tasks" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="nTxDcVlqjVsE" isSpecification="false" name="view_finished_tasks" comment="Provide interactive view of finished tasks." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="G9oiFBF2cBFC" isSpecification="false" name="clear_finished_tasks" comment="Remove all finished tasks." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="BdV0MBxaIlGX" isSpecification="false" name="remove_finished_task" comment="Provide interactive way to remove one finished task." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="bGXqPExapTY9" isSpecification="false" name="edit_finished_task" comment="Provide interactive way to edit one finished task." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="kNSU56egLBUk" isSpecification="false" name="unfinish_task" comment="Mark finished task as pending." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="3nlXlRgTn6vs" isSpecification="false" name="view_config_finished" comment="Provide interactive configuration.&#xa;As accessed from the view of finished tasks" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="PepkhDLl04Gj" isSpecification="false" name="shutdown" comment="Execution should normally end here." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="i3V9anUzPJi7" isSpecification="false" name="save_dialog" comment="Provide interactive way to save tasks on exit." isLeaf="false"/>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="2Tujvvk0xUFQ" visibility="public" isAbstract="true" isRoot="false" xmi.id="X2HCj4cP58Yd" isSpecification="false" name="Interface" comment="Abstract class/interface for interface implementations for Arch_Lab.&#xa;    An interface should implement all of these to be usable.&#xa;" isLeaf="false">
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="v2dJKJQoKEJQ" isSpecification="false" name="__init__" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="iFylLUNEXyXp" isSpecification="false" name="welcome" comment="Provide welcome message." ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="qBkgrMDYZBHs" isSpecification="false" name="print_finished_tasks" comment="Provide view of finished tasks.&#xa;        tasks: ((string, datetime.date), -||-)&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="rAaBEWpEKxc3" isSpecification="false" name="tasks" value="" type="0o8Pl6XY6CAz"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="J6SrFjjtMo1y" isSpecification="false" name="finished_tasks_menu" comment="Provide interactive finished tasks menu.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;              ((string, string, ...), -||-)&#xa;        return: element of opts that was chosen by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="fENmDGgUL8La" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="iaY0X84ZHegb" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="p3RBrTAGSyD0" isSpecification="false" name="print_pending_tasks" comment="Provide view of pending tasks.&#xa;        tasks: ((string, datetime.date), -||-)&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="Db8ImrcUR8Vw" isSpecification="false" name="tasks" value="" type="0o8Pl6XY6CAz"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="UsNwqau5Ow4w" isSpecification="false" name="pending_tasks_menu" comment="Provide interactive pending tasks menu.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;              ((string, string, ...), -||-)&#xa;        return: element of opts that was chosen by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="R0hFIhnTItl4" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="zIWMEbI9kSLM" isSpecification="false" name="ask_task" comment="Ask for a task descriptor.&#xa;        return: int - task descriptor, as input by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="avhJN4n43rz3" type="MlZPnAg1EIfq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="d3XFSviQBFmP" isSpecification="false" name="new_task_dialog" comment="Provide interactive dialog for adding new task.&#xa;        return: (content, year, month, day)&#xa;                (str, int, int, int) if date read correctly. If any part of&#xa;                date was read incorrectly, that part (or all three parts) may&#xa;                be replaced with None.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="o4YWVrs3kXM8" type="CPQ4B0FvUA7F" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="c9Ady9fZDApd" isSpecification="false" name="edit_task_dialog" comment="Provide interactive dialog for editing a task.&#xa;        return: (content, year, month, day)&#xa;                (str, int, int, int) if date read correctly. If any part of&#xa;                date was read incorrectly, that part (or all three parts) may&#xa;                be replaced with None.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="1rQjOkr0tzcq" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="fIHWA3HZ4yoM" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="9HPMPExTi1jQ" isSpecification="false" name="bad_task" comment="Inform user that task is not there interactively." ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="93713jrAyGWO" isSpecification="false" name="bad_input" comment="Inform user that they menace to crash the program with their input.&#xa;" ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="Mzq6M2DW4JX5" isSpecification="false" name="save_dialog" comment="Provide interactive dialog for saving tasks.&#xa;return: boolean - user's choic" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="2MFzcjN3ACCd" type="Wi2fD3nZmMwX" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="lksdCpzWmqb9" isSpecification="false" name="config_menu" comment="Provide interactive serialization configuration menu.&#xa;        current: string - method currently used for serialization.&#xa;        available: seq of two-item seqs ((string, string), -||-), where first&#xa;                   item in every seq is a serialization method and second is&#xa;                   it's hopefully helpful description.&#xa;        return: string - new serialization method.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="Mwj7kIEb5rTA" type="mUuEnjSPCvsq" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="qodu5Ax8UC54" isSpecification="false" name="current" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="en4WEOqgjpcb" isSpecification="false" name="available" value="" type="xK91HwLuV8qw"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="2Tujvvk0xUFQ" visibility="public" isAbstract="true" isRoot="false" xmi.id="YBYKyA7HEr16" isSpecification="false" name="Engine" comment="Abstract class/interface for engine implementations for Arch_Lab.&#xa;An engine should implement all of these to be usable" isLeaf="false">
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="zAGum9eqWbch" isSpecification="false" name="__init__" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="p9f1ye7xoLpZ" isSpecification="false" name="view_pending_tasks" comment="Fetch pending tasks.&#xa;        Should return the list of stored pending tasks as a list of tuples.&#xa;        return: [(string, datetime.date), -||-]&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="UTPz30gmXmLj" type="pOFehEYtdyvm" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="zUSP8UlvcOxY" isSpecification="false" name="new_task" comment="Add new task to the list of pending tasks.&#xa;        content: string - task description.&#xa;        year: int - year task is scheduled on.&#xa;        month: int - month task is scheduled on.&#xa;        day: int - day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="12WnOJMqnkpo" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="5Jnw62ysjkKe" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="BtdB18u6Sh1W" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="tifHmt6xkj8m" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="B5WUZ27LrbtQ" isSpecification="false" name="remove_pending_task" comment="Remove task from the list of pending tasks.&#xa;        May crash if task does not exist.&#xa;        id: int - descriptor, namely position of a task in the list." isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="vmP7R94JphYc" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="vK3nvxDlDtMN" isSpecification="false" name="edit_pending_task" comment="Edit a task in the list of pending tasks.&#xa;        If content is &quot;&quot;, description should not change. If all of year,&#xa;        month and date are None, all three of them should not change. Other&#xa;        behaviour is implementation dependent.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;        content: string - new task description.&#xa;        year: int - new year task is scheduled on.&#xa;        month: int - new month task is scheduled on.&#xa;        day: int - new day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="pKgdWP7QBVVb" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="A6GL1S3wk7hd" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="DGgsDCA0Woc1" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="GHYLojl0zSqA" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="PGSs7hYLw6ei" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="y4s38k5df4sd" isSpecification="false" name="finish_task" comment="Move task from the pending list to the finished list.&#xa;        id: int - descriptor, namely position of a task in a list.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="mfDDAXqYoIOt" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="3CQgEGJwzwDw" isSpecification="false" name="view_finished_tasks" comment="Fetch finished tasks.&#xa;        Should return the list of stored finished tasks as a list of tuples.&#xa;        return: [(string, datetime.date), -||-]&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="oppWVFtiMHnQ" type="pOFehEYtdyvm" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="uEVZWaMXmlE0" isSpecification="false" name="clear_finished_tasks" comment="Remove all finished tasks.&#xa;        List of finished tasks should be empty after this.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="ze5Jvtkn7DMb" isSpecification="false" name="remove_finished_task" comment="Remove task from the list of finished tasks.&#xa;        May crash if task does not exist.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="qXVJZ3YLijWr" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="mAarMxT9eah6" isSpecification="false" name="edit_finished_task" comment="Edit a task in the list of finished tasks.&#xa;        If content is &quot;&quot;, description should not change. If all of year,&#xa;        month and date are None, all three of them should not change. Other&#xa;        behaviour is implementation dependent.&#xa;        id: int - descriptor, namely position of a task in the list.&#xa;        content: string - new task description.&#xa;        year: int - new year task is scheduled on.&#xa;        month: int - new month task is scheduled on.&#xa;        day: int - new day task is scheduled on.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="zAaCSBHGilZF" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="sIXm9xbv6BlQ" isSpecification="false" name="content" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="JyXlgepCfVQq" isSpecification="false" name="year" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="SbK6nyZ6u6pb" isSpecification="false" name="month" value="" type="MlZPnAg1EIfq"/>
+            <UML:Parameter visibility="private" xmi.id="OdzETyQuXk0K" isSpecification="false" name="day" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="eDERmyQFFGni" isSpecification="false" name="unfinish_task" comment="Move task from the finished list to the pending list.&#xa;        id: int - descriptor, namely position of a task in a list.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="9smgyc5ME4Zh" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="Yoon2cTrMgRe" isSpecification="false" name="save_tasks" comment="Store task lists.&#xa;        Should employ some method of storing currently used tasks so that they&#xa;        can be loaded later even if program was removed from memory.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="VGIKqhsMTg9W" isSpecification="false" name="get_savemethod" comment="Get currently employed savemethod.&#xa;        Savemethod - some specific way to store task lists used by save_tasks.&#xa;        return: string - savemethod.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="GbNaHnEQJr47" type="mUuEnjSPCvsq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="bYsaQjuvyAEo" isSpecification="false" name="get_available_savemethods" comment="Get savemethods that are currently available.&#xa;        And their hopefully helpful descriptions.&#xa;        Savemethod - some specific way to store task lists used by save_tasks.&#xa;        return: seq of two-item seqs ((string, string), -||-), where first item&#xa;                in every seq is a savemethod and second is it's hopefully&#xa;                helpful description.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="p6AJkHp1sAb8" type="xK91HwLuV8qw" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="voYFdaKE8CnY" isSpecification="false" name="set_savemethod" comment="Change employed savemethod.&#xa;        Savemethod - some specific way to store task lists used by save_tasks.&#xa;        method: string - new savemethod to set.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="S95I4kGDc0sa" isSpecification="false" name="method" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="true" isRoot="false" xmi.id="CKgJUTpP6FHu" isSpecification="false" name="changes_detected" comment="Answers if task set changed.&#xa;        Specifically, if currently used task set differs from stored ones.&#xa;" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="vwXdmP6r6Zmx" type="Wi2fD3nZmMwX" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="8zYCZA7f263S" isSpecification="false" name="interface" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="8zYCZA7f263S" visibility="public" isAbstract="false" isRoot="false" xmi.id="JUf1cdJviPg3" isSpecification="false" name="TerminalInterface" comment="Interface implementation for Arch_Lab.&#xa;    TerminalInterface provides a terminal interface to Arch_Lab task management&#xa;    functions.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="meLNfvgvkB6v"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="c3RpV0cZqKL5" isSpecification="false" name="__init__" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="IU1uOFl1IAol" isSpecification="false" name="welcome" comment="Print welcome message.&#xa;        Makes use of ANSI escape codes for formatting.&#xa;" ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="05xeeEywgyp3" isSpecification="false" name="menu" comment="Provide generic menu.&#xa;        Prints options determined by argument under title determined by&#xa;        argument.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;              ((string, string, ...), -||-)&#xa;        title: title for the menu, string.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="4RfYXUSCFWgT" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+            <UML:Parameter visibility="private" xmi.id="CsC0gLteOpG2" isSpecification="false" name="title" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="Z5tjchZpZknD" isSpecification="false" name="menu_decide" comment="Process user choice and return chosen option.&#xa;        Returns element of opts list that user have chosen. If user's choise&#xa;        does not correspond to any descriptor in opts, returns None, notifies&#xa;        user and asks to try again (calls menu_decide).&#xa;        Makes use of ANSI escape codes for formatting.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;        choice: choice made by user (one of the descriptors in opts).&#xa;        return: chosen option (list that has at least two elements -&#xa;                (descriptor, option), both string) or None if there was no&#xa;                option corresponding to user's choice.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="xMEU6zh9eZZ3" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="SkDwtHhxhKTE" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+            <UML:Parameter visibility="private" xmi.id="7qwPZnP6rGpR" isSpecification="false" name="choice" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="i1U3ObcVPYsy" isSpecification="false" name="print_tasks" comment="Print tasks.&#xa;        Prints tasks as formatted list. Date displayed according to locale.&#xa;        In 'pending' mode also marks tasks as 'overdue' or 'today'.&#xa;        tasks: ((string, datetime.date), -||-)&#xa;        finished: boolean. True  => 'finished' mode&#xa;                           False => 'pending' mode&#xa;        All branches tested in print_pending_tasks(), print_finished_tasks()&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="K29HJtPlbchU" isSpecification="false" name="tasks" value="" type="0o8Pl6XY6CAz"/>
+            <UML:Parameter visibility="private" xmi.id="EvTmWLboMk6f" isSpecification="false" name="finished" value="" type="Wi2fD3nZmMwX"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="o7p0wjGkLeBV" isSpecification="false" name="print_finished_tasks" comment="Print finished tasks.&#xa;        Prints tasks as formatted list. Date displayed according to locale.&#xa;        tasks: ((string, datetime.date), -||-)&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="xIUiRvteqMOK" isSpecification="false" name="tasks" value="" type="0o8Pl6XY6CAz"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="AqVTSey2HJZp" isSpecification="false" name="finished_tasks_menu" comment="Provide interactive finished tasks menu.&#xa;        Prints options determined by argument and allows user to choose one.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;              ((string, string, ...), -||-)&#xa;        return: element of opts that was chosen by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="6ABvYlggbCA1" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="89fXD8a8Q3os" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="q636Pbv00nL3" isSpecification="false" name="print_pending_tasks" comment="Print pending tasks.&#xa;        Prints tasks as formatted list. Date displayed according to locale.&#xa;        Tasks that are overdue (dated earlier than current date, but still&#xa;        pending) and tasks scheduled for current date will be marked&#xa;        accordingly.&#xa;        tasks: ((string, datetime.date), -||-)&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="NMp1PHiXPL4a" isSpecification="false" name="tasks" value="" type="0o8Pl6XY6CAz"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="3Yu3KF4xjRIa" isSpecification="false" name="pending_tasks_menu" comment="Provide interactive pending tasks menu.&#xa;        Prints options determined by argument and allows user to choose one.&#xa;        opts: list of lists which have at least two elements - (descriptor,&#xa;              option), both string - and each represent menu item.&#xa;              ((string, string, ...), -||-)&#xa;        return: element of opts that was chosen by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="fq9CIm7LJ1Ob" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="8RqxdVWysJzH" isSpecification="false" name="opts" value="" type="6I52kxca5ClJ"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="HRWysoWD21cH" isSpecification="false" name="ask_task" comment="Ask for a task descriptor.&#xa;        Should be used only after fresh (with no changes after printing yet)&#xa;        list of tasks was printed. Will ask to press Return and try again if&#xa;        input is not int.&#xa;        return: int - task descriptor, as input by user.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="NYMFnorRfydx" type="MlZPnAg1EIfq" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="iiHzkdaz46xx" isSpecification="false" name="task_input" comment="Provide interactive dialog for task input.&#xa;        Used to add and edit tasks. Will ask user for task description (any&#xa;        string) and date in YYYY-MM-DD (with any single character delimiters).&#xa;        return: (str, int, int, int) if date read correctly,&#xa;                (str, None, None, None) if date not read correctly.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="vS8vTiDqHX42" type="CPQ4B0FvUA7F" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="MtTzr5wZnBXX" isSpecification="false" name="new_task_dialog" comment="Provide interactive dialog for adding new task.&#xa;        Prints status and calls task_input().&#xa;        return: (str, int, int, int) if date read correctly,&#xa;                (str, None, None, None) if date not read correctly.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="p7WtCSo7uv0L" type="CPQ4B0FvUA7F" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="dBAsjEv37O2y" isSpecification="false" name="edit_task_dialog" comment="Provide interactive dialog for editing a task.&#xa;        Prints status and calls task_input().&#xa;        return: (str, int, int, int) if date read correctly,&#xa;                (str, None, None, None) if date not read correctly.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="fbPXWNs9Z20G" type="CPQ4B0FvUA7F" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="7DBXPbe7hIw3" isSpecification="false" name="id" value="" type="MlZPnAg1EIfq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="GvJLHJJjFnwL" isSpecification="false" name="bad_task" comment="Inform user that task is not there interactively.&#xa;        Namely, if user gave ask_task() an incorrect descriptor. Will also ask&#xa;        to press Return and try again.&#xa;" ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="wwFVyDlD82YQ" isSpecification="false" name="bad_input" comment="Inform user that they crashed the engine with their input.&#xa;        Congratulations! Will also ask to press Return and try again.&#xa;" ownerScope="classifier" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="7R7j0Bpw73P3" isSpecification="false" name="save_dialog" comment="Provide interactive dialog for saving tasks.&#xa;        return: boolean - user's choice&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="G8GNAnnTds1E" type="Wi2fD3nZmMwX" kind="return"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="vraayo95EHpC" isSpecification="false" name="config_menu" comment="Provide interactive serialization configuration menu.&#xa;        current: string - method currently used for serialization.&#xa;        available: seq of two-item seqs ((string, string), -||-), where first&#xa;                   item in every seq is a serialization method and second is&#xa;                   it's hopefully helpful description.&#xa;        return: string - new serialization method.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter xmi.id="mX60mtCEWIl9" type="mUuEnjSPCvsq" kind="return"/>
+            <UML:Parameter visibility="private" xmi.id="Sc8XfVaudpHl" isSpecification="false" name="current" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="ohmUxTA2gKZ5" isSpecification="false" name="available" value="" type="xK91HwLuV8qw"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="G25ENDqPek7Z" isSpecification="false" name="controller" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="G25ENDqPek7Z" visibility="public" isAbstract="false" isRoot="false" xmi.id="f2fAltRbHeDz" isSpecification="false" name="SimpleController" comment="Controller implementation for Arch_Lab.&#xa;    SimpleController supports connecting given interface and engine without any&#xa;    extra features.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="Pbtiojdvb0PA"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="46XjYW2ikxjy" isSpecification="false" name="run" comment="Execution should normally start here.&#xa;        Displays welcome message and switches to pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="gm93ve2zlXgH" isSpecification="false" name="view_pending_tasks" comment="Provide interactive view of pending tasks.&#xa;        Tasks will be sorted by date from earliest to latest; tasks that are&#xa;        overdue (dated earlier than current date, but still pending) and tasks&#xa;        scheduled for current date will be marked accordingly.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="aIxSbJlF3uIy" isSpecification="false" name="add_new_task" comment="Add new task interactively.&#xa;        Task will be marked pending by default. After task is added returns to&#xa;        the pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="9OEh2uWdAR3j" isSpecification="false" name="remove_pending_task" comment="Provide interactive way to remove one pending task.&#xa;        After task is removed returns to the pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="ExFSQuFXIREL" isSpecification="false" name="edit_pending_task" comment="Provide interactive way to edit one pending task.&#xa;        After edits are done returns to the pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="QPbz32MFxbhM" isSpecification="false" name="finish_task" comment="Mark pending task as finished interactively.&#xa;        Afterwards returns to the pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="wLtfWZ5uyetz" isSpecification="false" name="view_config_pending" comment="Provide interactive configuration.&#xa;        As accessed from the view of pending tasks.&#xa;        Afterwards returns to the pending task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="t7mi4ti1EZei" isSpecification="false" name="view_finished_tasks" comment="Provide interactive view of finished tasks.&#xa;        Tasks will be sorted by date from earliest to latest.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="9WiwJj4Bortt" isSpecification="false" name="clear_finished_tasks" comment="Remove all finished tasks.&#xa;        Afterwards returns to the finished task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="jGXPU7qddWav" isSpecification="false" name="remove_finished_task" comment="Provide interactive way to remove one finished task.&#xa;        After task is removed returns to the finished task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="HksTz41gKY3n" isSpecification="false" name="edit_finished_task" comment="Provide interactive way to edit one finished task.&#xa;        After edits are done returns to the finished task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="CTEjELMU4Cv1" isSpecification="false" name="unfinish_task" comment="Mark finished task as pending.&#xa;        Afterwards returns to the finished task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="hbWIp7LzaZip" isSpecification="false" name="view_config_finished" comment="Provide interactive configuration.&#xa;        As accessed from the view of finished tasks.&#xa;        Afterwards returns to the finished task view.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="NMlw59sniO3W" isSpecification="false" name="shutdown" comment="Execution should normally end here.&#xa;        Calls save_dialog so that user can choose if tasks should be saved or&#xa;        not.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="KgtRJr1eDkYH" isSpecification="false" name="save_dialog" comment="Provide interactive way to save tasks on exit." isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="oD91LtRdXI3o" isSpecification="false" name="view_config" comment="Provide interactive configuration." isLeaf="false"/>
+         </UML:Classifier.feature>
+        </UML:Class>
+        <UML:Class namespace="G25ENDqPek7Z" visibility="public" isAbstract="false" isRoot="false" xmi.id="jOO9yiXmvgnG" isSpecification="false" name="ArgumentController" comment="Controller implementation for Arch_Lab.&#xa;    Extends SimpleController with command line argument functionality.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="XCs2VvqexGxk"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="fZqcnnN0LmWW" isSpecification="false" name="run" comment="Execution should normally start here.&#xa;        If there were no arguments, displays welcome message and switches to&#xa;        pending task view.&#xa;        Otherwise processes arguments.&#xa;" isLeaf="false"/>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="iWsRGbcvAQYx" isSpecification="false" name="process_args" comment="Process arguments.&#xa;        Provides support for the following arguments:&#xa;        -h, --help      show help message and exit&#xa;        -a, --add       switch to task add dialogue&#xa;        -r, --remove    switch to task removal dialogue&#xa;        -e, --edit      switch to task edit dialogue&#xa;        -m, --mfinish   switch to finish task dialogue&#xa;        -f, --finished  switch to finished view&#xa;        -c, --config    switch to config dialogue&#xa;" isLeaf="false"/>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="drYaLl0RkWbH" isSpecification="false" name="pickle_backend" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="drYaLl0RkWbH" visibility="public" isAbstract="false" isRoot="false" xmi.id="AB4jyvpwSus7" isSpecification="false" name="PickleFileBackend" comment="FileBackend implementation for pickle format.&#xa;    Provides unified serialization interface to pickle for EngineConfig.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="U2VTTj3aXC9y"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="vrOT3VR0S22n" isSpecification="false" name="save" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="aW59I63CxHMF" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="XQJJM7KueP1w" isSpecification="false" name="item" value="" type="pOFehEYtdyvm"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="Fjjiiu5zlmcp" isSpecification="false" name="load" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="L6kjtABAxctk" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="ggugkx7zxCDL" isSpecification="false" name="json_backend" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="ggugkx7zxCDL" visibility="public" isAbstract="false" isRoot="false" xmi.id="nJ1O8I7kKJxC" isSpecification="false" name="JsonFileBackend" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="Sohk7fxb1u9L"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="VsQVEgv45EQl" isSpecification="false" name="save" comment="Serialize item into filename target. Create file or overwrite.&#xa;        target: string - file name.&#xa;        item: any json serializeable python data structure or engine.Task&#xa;              instance or datetime.date instance or any Python data structure&#xa;              containing any combination of those - item to serialize.&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="s3zORSnzr6GB" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="KWm2Brm2vlQM" isSpecification="false" name="item" value="" type="pOFehEYtdyvm"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="ELZC5lMtbpt6" isSpecification="false" name="load" comment="Deserialize filename target into two lists of Tasks.&#xa;        Will return tuple of two empty lists if file does not exist.&#xa;        target: string - file name.&#xa;        return: ([engine.Task, -||-], [engine.Task, -||-])&#xa;" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="xZ6yecBQzREa" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+         <UML:Namespace.ownedElement>
+          <UML:Class namespace="nJ1O8I7kKJxC" visibility="public" isAbstract="false" isRoot="false" xmi.id="8Cm85vTIatMt" isSpecification="false" name="TaskJSONEncoder" comment="FileBackend implementation for JSON format.&#xa;Provides unified serialization interface to json for EngineConfig.&#xa;A very poor implementation seeing how JSON in Python is so problematic.&#xa;Does not conform to interface in behaviour. Use at your own risk.&#xa;" isLeaf="false">
+           <UML:Classifier.feature>
+            <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="827QcoBh1NGQ" isSpecification="false" name="default" comment="Custom encoder to allow serialization of engine.Task and&#xa;datetime.date&#xa;" isLeaf="false">
+             <UML:BehavioralFeature.parameter>
+              <UML:Parameter xmi.id="QQxyD7cJ9jhj" type="mUuEnjSPCvsq" kind="return"/>
+              <UML:Parameter visibility="private" xmi.id="qQJOgmPK13Xm" isSpecification="false" name="obj" value="" type="mUuEnjSPCvsq"/>
+             </UML:BehavioralFeature.parameter>
+            </UML:Operation>
+           </UML:Classifier.feature>
+          </UML:Class>
+         </UML:Namespace.ownedElement>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Package namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="P3i4lpbOg9wz" isSpecification="false" name="yaml_backend" isLeaf="false">
+       <UML:Namespace.ownedElement>
+        <UML:Class namespace="P3i4lpbOg9wz" visibility="public" isAbstract="false" isRoot="false" xmi.id="zRGTdLXXldbO" isSpecification="false" name="YamlFileBackend" comment="FileBackend implementation for YAML format.&#xa;    Provides unified serialization interface to pyyaml for EngineConfig.&#xa;" isLeaf="false">
+         <UML:GeneralizableElement.generalization>
+          <UML:Generalization xmi.idref="wGhwne77bpEJ"/>
+         </UML:GeneralizableElement.generalization>
+         <UML:Classifier.feature>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="OodxdrHlI9vZ" isSpecification="false" name="save" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="WzvOXQCD2Ymk" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+            <UML:Parameter visibility="private" xmi.id="wtF9JmvojoAE" isSpecification="false" name="item" value="" type="pOFehEYtdyvm"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+          <UML:Operation isQuery="false" visibility="public" isAbstract="false" isRoot="false" xmi.id="oP6Xwc6vARcS" isSpecification="false" name="load" ownerScope="classifier" isLeaf="false">
+           <UML:BehavioralFeature.parameter>
+            <UML:Parameter visibility="private" xmi.id="SpAJfmlNhzKk" isSpecification="false" name="target" value="" type="mUuEnjSPCvsq"/>
+           </UML:BehavioralFeature.parameter>
+          </UML:Operation>
+         </UML:Classifier.feature>
+        </UML:Class>
+       </UML:Namespace.ownedElement>
+      </UML:Package>
+      <UML:Generalization namespace="Logical View" visibility="public" xmi.id="ksQh4d0UfjWQ" isSpecification="false" parent="YPVbDhXp1yg2" name="" discriminator="" child="JBZAP6QbmWEL"/>
+      <UML:Dependency namespace="Logical View" visibility="public" client="nJ1O8I7kKJxC" xmi.id="kkIPTon0tcBA" isSpecification="false" name="" supplier="JBZAP6QbmWEL"/>
+      <UML:Association namespace="Logical View" visibility="public" xmi.id="mW1g7AoRV6RQ" isSpecification="false" name="">
+       <UML:Association.connection>
+        <UML:AssociationEnd visibility="public" xmi.id="8VvkhilqCojo" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="aggregate" type="YPVbDhXp1yg2"/>
+        <UML:AssociationEnd visibility="public" xmi.id="fR8EQrFCNEqS" isSpecification="false" isNavigable="true" name="" changeability="changeable" aggregation="none" type="JBZAP6QbmWEL"/>
+       </UML:Association.connection>
+      </UML:Association>
+      <UML:Class namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="TSb5PNnbZLNx" isSpecification="false" name="engine.Task" isLeaf="false"/>
+      <UML:Class namespace="Logical View" visibility="public" isAbstract="false" isRoot="false" xmi.id="jl8iTtAjniPF" isSpecification="false" name="list(engine.Task)" isLeaf="false"/>
+     </UML:Namespace.ownedElement>
+     <XMI.extension xmi.extender="umbrello">
+      <diagrams>
+       <diagram textcolor="#000000" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showattribassocs="1" showstereotype="1" localid="-1" showpackage="1" canvasheight="1507.54" isopen="1" documentation="" linecolor="#ff0000" showattsig="1" linewidth="0" snapy="25" fillcolor="#ffff00" showscope="1" zoom="66.00000000000001" showpubliconly="0" snapgrid="0" showgrid="0" snapx="25" canvaswidth="2876.32" xmi.id="MQXGFTh38X1A" name="class diagram" showopsig="1" type="1" griddotcolor="#d3d3d3" backgroundcolor="#ffffff" snapcsgrid="0" showatts="1" usefillcolor="1" showops="1">
+        <widgets>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-670.992" localid="PVQEts14LFqv" x="-841.437" drawascircle="0" showpackage="1" linecolor="#ff0000" width="367" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="cqiRSgrcyYtS" showattributes="1" showopsigs="601" usefillcolor="1" height="266"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-353.163" localid="9uPWaVHCrYcl" x="-780.863" showpackage="1" linecolor="#ff0000" width="202" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="f2fAltRbHeDz" showattributes="1" showopsigs="601" usefillcolor="1" height="245"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-81.557" localid="lt9h0S9NyXar" x="-780.893" showpackage="1" linecolor="#ff0000" width="224" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="jOO9yiXmvgnG" showattributes="1" showopsigs="601" usefillcolor="1" height="49"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-43.8089" localid="2yycxNmS26lD" x="-68.09" drawascircle="0" showpackage="1" linecolor="#ff0000" width="234" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="WIo0YXAJq9hz" showattributes="1" showopsigs="601" usefillcolor="1" height="63"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="61.0109" localid="VRqVs3GIGN8t" x="72.7444" showpackage="1" linecolor="#ff0000" width="236" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="nJ1O8I7kKJxC" showattributes="1" showopsigs="601" usefillcolor="1" height="49"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="60.5631" localid="55ZBW6SCsaUp" x="-210.363" showpackage="1" linecolor="#ff0000" width="248" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="AB4jyvpwSus7" showattributes="1" showopsigs="601" usefillcolor="1" height="49"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="128.153" localid="feMZkWsDviin" x="-134.212" showpackage="1" linecolor="#ff0000" width="236" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="zRGTdLXXldbO" showattributes="1" showopsigs="601" usefillcolor="1" height="49"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-329.632" localid="V4NdJehafCzX" x="-1269.87" drawascircle="0" showpackage="1" linecolor="#ff0000" width="450" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="X2HCj4cP58Yd" showattributes="1" showopsigs="601" usefillcolor="1" height="203"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-343.942" localid="zrPcqFXLJswa" x="-550.102" drawascircle="0" showpackage="1" linecolor="#ff0000" width="489" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="YBYKyA7HEr16" showattributes="1" showopsigs="601" usefillcolor="1" height="245"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-99.0275" localid="e1Ai25VRgz1M" x="-1255.03" showpackage="1" linecolor="#ff0000" width="454" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="JUf1cdJviPg3" showattributes="1" showopsigs="601" usefillcolor="1" height="259"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-76.1547" localid="nHSXSWQUO2R7" x="-473.423" showpackage="1" linecolor="#ff0000" width="342" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="p1jnDMvwqmL7" showattributes="1" showopsigs="601" usefillcolor="1" height="126"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="76.4235" localid="dnrlNoO9JIod" x="-772.188" showpackage="1" linecolor="#ff0000" width="489" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="YPVbDhXp1yg2" showattributes="1" showopsigs="601" usefillcolor="1" height="210"/>
+         <classwidget textcolor="#000000" showoperations="1" showattsigs="601" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="203.014" localid="uwQcQ2s7gmlR" x="-214.503" showpackage="1" linecolor="#ff0000" width="377" isinstance="0" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" showscope="1" usesdiagramusefillcolor="0" showpubliconly="0" xmi.id="JBZAP6QbmWEL" showattributes="1" showopsigs="601" usefillcolor="1" height="112"/>
+        </widgets>
+        <messages/>
+        <associations>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="f2fAltRbHeDz" linecolor="#ff0000" linewidth="0" xmi.id="XCs2VvqexGxk" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" widgetaid="jOO9yiXmvgnG" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-672" starty="-81.557"/>
+           <endpoint endx="-672" endy="-108.163"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="cqiRSgrcyYtS" linecolor="#ff0000" linewidth="0" xmi.id="Pbtiojdvb0PA" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" widgetaid="f2fAltRbHeDz" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-677" starty="-353.163"/>
+           <endpoint endx="-677" endy="-404.992"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="WIo0YXAJq9hz" linecolor="#ff0000" linewidth="0" xmi.id="Sohk7fxb1u9L" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="88" usesdiagramfillcolor="0" widgetaid="nJ1O8I7kKJxC" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="110.398" starty="61.0109"/>
+           <endpoint endx="110.398" endy="19.1911"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="WIo0YXAJq9hz" linecolor="#ff0000" linewidth="0" xmi.id="U2VTTj3aXC9y" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" widgetaid="AB4jyvpwSus7" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-52.9385" starty="60.5631"/>
+           <endpoint endx="-52.9385" endy="19.1911"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="WIo0YXAJq9hz" linecolor="#ff0000" linewidth="0" xmi.id="wGhwne77bpEJ" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" widgetaid="zRGTdLXXldbO" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="58.2118" starty="128.153"/>
+           <endpoint endx="58.2118" endy="19.1911"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="YBYKyA7HEr16" linecolor="#ff0000" linewidth="0" xmi.id="WbBBoAhMyPnN" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="64" usesdiagramfillcolor="0" widgetaid="f2fAltRbHeDz" totalcountb="2" type="501">
+          <linepath layout="Polyline">
+           <startpoint startx="-578.863" starty="-228.691"/>
+           <endpoint endx="-550.102" endy="-228.691"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="X2HCj4cP58Yd" linecolor="#ff0000" linewidth="0" xmi.id="Y53UTpqm33vn" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="112" usesdiagramfillcolor="0" widgetaid="f2fAltRbHeDz" totalcountb="2" type="501">
+          <linepath layout="Polyline">
+           <startpoint startx="-780.863" starty="-235.102"/>
+           <endpoint endx="-819.868" endy="-235.102"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="X2HCj4cP58Yd" linecolor="#ff0000" linewidth="0" xmi.id="meLNfvgvkB6v" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="35" usesdiagramfillcolor="0" widgetaid="JUf1cdJviPg3" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-1067.32" starty="-99.0275"/>
+           <endpoint endx="-1067.32" endy="-126.632"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="none" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="YBYKyA7HEr16" linecolor="#ff0000" linewidth="0" xmi.id="olVaFZNm8aye" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="255" usesdiagramfillcolor="255" widgetaid="p1jnDMvwqmL7" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-312.399" starty="-76.1547"/>
+           <endpoint endx="-312.399" endy="-98.9419"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="p1jnDMvwqmL7" linecolor="#ff0000" linewidth="0" xmi.id="ZWHDVQNoQbCb" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="225" usesdiagramfillcolor="0" widgetaid="YPVbDhXp1yg2" totalcountb="2" type="500">
+          <linepath layout="Polyline">
+           <startpoint startx="-360.893" starty="76.4235"/>
+           <endpoint endx="-360.893" endy="49.8453"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="JBZAP6QbmWEL" linecolor="#ff0000" linewidth="0" xmi.id="kkIPTon0tcBA" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="0" usesdiagramfillcolor="0" widgetaid="nJ1O8I7kKJxC" totalcountb="2" type="502">
+          <linepath layout="Polyline">
+           <startpoint startx="142.8" starty="110.011"/>
+           <endpoint endx="142.8" endy="203.014"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget usefillcolor="1" fillcolor="#ffff00" seqnum="" indexb="1" font="Sans Serif,9,-1,5,50,0,0,0,0,0" widgetbid="JBZAP6QbmWEL" linecolor="#ff0000" linewidth="0" xmi.id="mW1g7AoRV6RQ" totalcounta="2" indexa="1" textcolor="none" usesdiagramusefillcolor="240" usesdiagramfillcolor="0" widgetaid="YPVbDhXp1yg2" totalcountb="2" type="501">
+          <linepath layout="Polyline">
+           <startpoint startx="-283.188" starty="222.82"/>
+           <endpoint endx="-214.503" endy="222.82"/>
+          </linepath>
+         </assocwidget>
+         <assocwidget textcolor="#000000" font="Sans Serif,9,-1,5,50,0,0,0,0,0" changeabilityA="900" visibilityB="0" visibilityA="0" linecolor="#ff0000" indexa="1" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" seqnum="" changeabilityB="900" xmi.id="umK8DipgWUwJ" totalcountb="2" widgetbid="X2HCj4cP58Yd" type="501" widgetaid="cqiRSgrcyYtS" indexb="1" usefillcolor="1" totalcounta="2">
+          <linepath layout="Polyline">
+           <startpoint startx="-826.543" starty="-404.992"/>
+           <endpoint endx="-826.543" endy="-329.632"/>
+          </linepath>
+          <floatingtext textcolor="none" pretext="+" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-354.214" localid="MYXfkrKJwbQM" x="-906.602" posttext="" text="interface" linecolor="#ff0000" role="710" width="74" isinstance="0" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" xmi.id="DRAWpu6jeQrs" usefillcolor="1" height="18"/>
+         </assocwidget>
+         <assocwidget textcolor="#000000" font="Sans Serif,9,-1,5,50,0,0,0,0,0" changeabilityA="900" visibilityB="0" visibilityA="0" linecolor="#ff0000" indexa="1" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" seqnum="" changeabilityB="900" xmi.id="7hWdBSwWzR9j" totalcountb="2" widgetbid="YBYKyA7HEr16" type="501" widgetaid="cqiRSgrcyYtS" indexb="1" usefillcolor="1" totalcounta="2">
+          <linepath layout="Polyline">
+           <startpoint startx="-483.602" starty="-404.992"/>
+           <endpoint endx="-483.602" endy="-343.942"/>
+          </linepath>
+          <floatingtext textcolor="none" pretext="+" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-366.233" localid="IT1E2RZDqjjf" x="-549.894" posttext="" text="engine" linecolor="#ff0000" role="710" width="61" isinstance="0" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" xmi.id="bpOFEE5Jtcw2" usefillcolor="1" height="18"/>
+         </assocwidget>
+         <assocwidget textcolor="#000000" font="Sans Serif,9,-1,5,50,0,0,0,0,0" changeabilityA="900" visibilityB="0" visibilityA="0" linecolor="#ff0000" indexa="1" linewidth="0" fillcolor="#ffff00" usesdiagramfillcolor="0" usesdiagramusefillcolor="0" seqnum="" changeabilityB="900" xmi.id="DuN4WJ7X7dYM" totalcountb="2" widgetbid="WIo0YXAJq9hz" type="501" widgetaid="p1jnDMvwqmL7" indexb="1" usefillcolor="1" totalcounta="2">
+          <linepath layout="Polyline">
+           <startpoint startx="-131.423" starty="-2.02107"/>
+           <endpoint endx="-68.09" endy="-2.02107"/>
+          </linepath>
+          <floatingtext textcolor="none" pretext="+" font="Sans Serif,9,-1,5,50,0,0,0,0,0" showstereotype="1" y="-66.6877" localid="JHwQzjZ64u47" x="-81.3021" posttext="" text="file_backend" linecolor="#ff0000" role="710" width="96" isinstance="0" linewidth="0" fillcolor="none" usesdiagramfillcolor="1" usesdiagramusefillcolor="1" xmi.id="xhipgXtsSEww" usefillcolor="1" height="18"/>
+         </assocwidget>
+        </associations>
+       </diagram>
+      </diagrams>
+     </XMI.extension>
+    </UML:Model>
+    <UML:Model namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="Use Case View" isSpecification="false" name="Use Case View" isLeaf="false">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="Component View" isSpecification="false" name="Component View" isLeaf="false">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="Deployment View" isSpecification="false" name="Deployment View" isLeaf="false">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+    <UML:Model namespace="m1" visibility="public" isAbstract="false" isRoot="false" xmi.id="Entity Relationship Model" isSpecification="false" name="Entity Relationship Model" isLeaf="false">
+     <UML:Namespace.ownedElement/>
+    </UML:Model>
+   </UML:Namespace.ownedElement>
+  </UML:Model>
+ </XMI.content>
+ <XMI.extensions xmi.extender="umbrello">
+  <docsettings uniqueid="jl8iTtAjniPF" viewid="MQXGFTh38X1A" documentation=""/>
+  <listview>
+   <listitem open="1" id="Views" type="800">
+    <listitem open="1" id="Component View" type="821"/>
+    <listitem open="1" id="Deployment View" type="827"/>
+    <listitem open="1" id="Entity Relationship Model" type="836"/>
+    <listitem open="1" id="Logical View" type="801">
+     <listitem open="0" id="MQXGFTh38X1A" label="class diagram" type="807"/>
+     <listitem open="1" id="G25ENDqPek7Z" type="818">
+      <listitem open="0" id="jOO9yiXmvgnG" type="813">
+       <listitem open="0" id="iWsRGbcvAQYx" type="815"/>
+       <listitem open="0" id="fZqcnnN0LmWW" type="815"/>
+      </listitem>
+      <listitem open="0" id="f2fAltRbHeDz" type="813">
+       <listitem open="0" id="aIxSbJlF3uIy" type="815"/>
+       <listitem open="0" id="9WiwJj4Bortt" type="815"/>
+       <listitem open="0" id="HksTz41gKY3n" type="815"/>
+       <listitem open="0" id="ExFSQuFXIREL" type="815"/>
+       <listitem open="0" id="QPbz32MFxbhM" type="815"/>
+       <listitem open="0" id="jGXPU7qddWav" type="815"/>
+       <listitem open="0" id="9OEh2uWdAR3j" type="815"/>
+       <listitem open="0" id="46XjYW2ikxjy" type="815"/>
+       <listitem open="0" id="KgtRJr1eDkYH" type="815"/>
+       <listitem open="0" id="NMlw59sniO3W" type="815"/>
+       <listitem open="0" id="CTEjELMU4Cv1" type="815"/>
+       <listitem open="0" id="hbWIp7LzaZip" type="815"/>
+       <listitem open="0" id="wLtfWZ5uyetz" type="815"/>
+       <listitem open="0" id="oD91LtRdXI3o" type="815"/>
+       <listitem open="0" id="t7mi4ti1EZei" type="815"/>
+       <listitem open="0" id="gm93ve2zlXgH" type="815"/>
+      </listitem>
+     </listitem>
+     <listitem open="0" id="Datatypes" type="830">
+      <listitem open="1" id="O2sOm8AypL1w" type="829"/>
+      <listitem open="1" id="Wi2fD3nZmMwX" type="829"/>
+      <listitem open="1" id="zfj4QNYkl50y" type="829"/>
+      <listitem open="1" id="rXc3TStrUjGH" type="829"/>
+      <listitem open="1" id="cQyMWzK2fKfs" type="829"/>
+      <listitem open="1" id="VaYjsDZqqHuG" type="829"/>
+      <listitem open="1" id="MlZPnAg1EIfq" type="829"/>
+      <listitem open="1" id="OXZFoRTOsSiM" type="829"/>
+      <listitem open="1" id="pOFehEYtdyvm" type="829"/>
+      <listitem open="1" id="w9hOJpd8MDBn" type="829"/>
+      <listitem open="1" id="NSP9nJeItDzj" type="829"/>
+      <listitem open="1" id="mUuEnjSPCvsq" type="829"/>
+      <listitem open="1" id="CPQ4B0FvUA7F" type="829"/>
+      <listitem open="1" id="P1O4L2whSJoF" type="829"/>
+      <listitem open="1" id="BhA37tPWsmaD" type="829"/>
+      <listitem open="1" id="cTVTgVC20mFm" type="829"/>
+     </listitem>
+     <listitem open="1" id="WMzZMLY8qf6c" type="813">
+      <listitem open="1" id="p1jnDMvwqmL7" type="813">
+       <listitem open="0" id="ulaYebOsYAwF" type="815"/>
+       <listitem open="0" id="eMTq3bsHfy9C" type="815"/>
+       <listitem open="0" id="V3Tcf0yyFtOF" type="814"/>
+       <listitem open="0" id="DuN4WJ7X7dYM" type="814"/>
+       <listitem open="0" id="fOVbpXx6gSG3" type="815"/>
+       <listitem open="0" id="IAXAN6WFp6lR" type="815"/>
+       <listitem open="0" id="2qY1Hhja9km9" type="814"/>
+       <listitem open="0" id="J72esqDYEi92" type="815"/>
+      </listitem>
+      <listitem open="0" id="WIo0YXAJq9hz" type="813">
+       <listitem open="0" id="3q9p1lbhVgKl" type="815"/>
+       <listitem open="0" id="1WpIiYDYZ8lI" type="815"/>
+       <listitem open="0" id="cnxE7LuAJEjw" type="815"/>
+      </listitem>
+      <listitem open="1" id="YPVbDhXp1yg2" type="813">
+       <listitem open="0" id="mjOCJamS0fMw" type="815"/>
+       <listitem open="0" id="3OUuJHn9VG12" type="815"/>
+       <listitem open="0" id="bzsJYhJQKRlB" type="815"/>
+       <listitem open="0" id="Qnpc24aL9C8Y" type="815"/>
+       <listitem open="0" id="Aorp4zRY2N1n" type="815"/>
+       <listitem open="0" id="tNyvlWehvF2W" type="814"/>
+       <listitem open="0" id="KxRT95Bun2os" type="815"/>
+       <listitem open="0" id="vPbLdXI8ZjiE" type="814"/>
+       <listitem open="0" id="s01ZwL6xjar0" type="815"/>
+       <listitem open="0" id="jwxsjRFFEEEx" type="815"/>
+       <listitem open="0" id="Cg6dam4xIlp3" type="815"/>
+       <listitem open="0" id="OP7rOv9qRuiT" type="815"/>
+       <listitem open="0" id="sETsZSfqw1ZD" type="815"/>
+       <listitem open="0" id="nkru5DVrvt2E" type="815"/>
+      </listitem>
+      <listitem open="0" id="JBZAP6QbmWEL" type="813">
+       <listitem open="0" id="rseYaB9oSFzK" type="815"/>
+       <listitem open="0" id="EH7DucD1nugz" type="815"/>
+       <listitem open="0" id="GHIZ28c9on1M" type="815"/>
+       <listitem open="0" id="0R8IuYkYydV0" type="815"/>
+       <listitem open="0" id="J76lK63AGPnL" type="815"/>
+       <listitem open="0" id="OftsjKIsoDaV" type="814"/>
+       <listitem open="0" id="wJK871ukS2xs" type="814"/>
+      </listitem>
+     </listitem>
+     <listitem open="1" id="TSb5PNnbZLNx" type="813"/>
+     <listitem open="1" id="8zYCZA7f263S" type="818">
+      <listitem open="0" id="JUf1cdJviPg3" type="813">
+       <listitem open="0" id="c3RpV0cZqKL5" type="815"/>
+       <listitem open="0" id="HRWysoWD21cH" type="815"/>
+       <listitem open="0" id="wwFVyDlD82YQ" type="815"/>
+       <listitem open="0" id="GvJLHJJjFnwL" type="815"/>
+       <listitem open="0" id="vraayo95EHpC" type="815"/>
+       <listitem open="0" id="dBAsjEv37O2y" type="815"/>
+       <listitem open="0" id="AqVTSey2HJZp" type="815"/>
+       <listitem open="0" id="Z5tjchZpZknD" type="815"/>
+       <listitem open="0" id="05xeeEywgyp3" type="815"/>
+       <listitem open="0" id="MtTzr5wZnBXX" type="815"/>
+       <listitem open="0" id="3Yu3KF4xjRIa" type="815"/>
+       <listitem open="0" id="o7p0wjGkLeBV" type="815"/>
+       <listitem open="0" id="q636Pbv00nL3" type="815"/>
+       <listitem open="0" id="i1U3ObcVPYsy" type="815"/>
+       <listitem open="0" id="7R7j0Bpw73P3" type="815"/>
+       <listitem open="0" id="iiHzkdaz46xx" type="815"/>
+       <listitem open="0" id="IU1uOFl1IAol" type="815"/>
+      </listitem>
+     </listitem>
+     <listitem open="1" id="ggugkx7zxCDL" type="818">
+      <listitem open="0" id="nJ1O8I7kKJxC" type="813">
+       <listitem open="0" id="ELZC5lMtbpt6" type="815"/>
+       <listitem open="0" id="VsQVEgv45EQl" type="815"/>
+       <listitem open="0" id="8Cm85vTIatMt" type="813">
+        <listitem open="0" id="827QcoBh1NGQ" type="815"/>
+       </listitem>
+      </listitem>
+     </listitem>
+     <listitem open="1" id="2Tujvvk0xUFQ" type="818">
+      <listitem open="1" id="cqiRSgrcyYtS" type="813">
+       <listitem open="0" id="zjq4y7ys3TTn" type="815"/>
+       <listitem open="0" id="xefRlmo1Jyzu" type="815"/>
+       <listitem open="0" id="G9oiFBF2cBFC" type="815"/>
+       <listitem open="0" id="bGXqPExapTY9" type="815"/>
+       <listitem open="0" id="vz3gIG9XwB2X" type="815"/>
+       <listitem open="0" id="7hWdBSwWzR9j" type="814"/>
+       <listitem open="0" id="pz28EvM9uPnA" type="815"/>
+       <listitem open="0" id="umK8DipgWUwJ" type="814"/>
+       <listitem open="0" id="BdV0MBxaIlGX" type="815"/>
+       <listitem open="0" id="Eg2XdCiapNza" type="815"/>
+       <listitem open="0" id="TeWiEdNVZei4" type="815"/>
+       <listitem open="0" id="i3V9anUzPJi7" type="815"/>
+       <listitem open="0" id="PepkhDLl04Gj" type="815"/>
+       <listitem open="0" id="kNSU56egLBUk" type="815"/>
+       <listitem open="0" id="3nlXlRgTn6vs" type="815"/>
+       <listitem open="0" id="EGm3XRYMRYTf" type="815"/>
+       <listitem open="0" id="nTxDcVlqjVsE" type="815"/>
+       <listitem open="0" id="GZAybvk4XGkk" type="815"/>
+      </listitem>
+      <listitem open="0" id="YBYKyA7HEr16" type="813">
+       <listitem open="0" id="zAGum9eqWbch" type="815"/>
+       <listitem open="0" id="CKgJUTpP6FHu" type="815"/>
+       <listitem open="0" id="uEVZWaMXmlE0" type="815"/>
+       <listitem open="0" id="mAarMxT9eah6" type="815"/>
+       <listitem open="0" id="vK3nvxDlDtMN" type="815"/>
+       <listitem open="0" id="y4s38k5df4sd" type="815"/>
+       <listitem open="0" id="bYsaQjuvyAEo" type="815"/>
+       <listitem open="0" id="VGIKqhsMTg9W" type="815"/>
+       <listitem open="0" id="zUSP8UlvcOxY" type="815"/>
+       <listitem open="0" id="ze5Jvtkn7DMb" type="815"/>
+       <listitem open="0" id="B5WUZ27LrbtQ" type="815"/>
+       <listitem open="0" id="Yoon2cTrMgRe" type="815"/>
+       <listitem open="0" id="voYFdaKE8CnY" type="815"/>
+       <listitem open="0" id="eDERmyQFFGni" type="815"/>
+       <listitem open="0" id="3CQgEGJwzwDw" type="815"/>
+       <listitem open="0" id="p9f1ye7xoLpZ" type="815"/>
+      </listitem>
+      <listitem open="0" id="X2HCj4cP58Yd" type="813">
+       <listitem open="0" id="v2dJKJQoKEJQ" type="815"/>
+       <listitem open="0" id="zIWMEbI9kSLM" type="815"/>
+       <listitem open="0" id="93713jrAyGWO" type="815"/>
+       <listitem open="0" id="9HPMPExTi1jQ" type="815"/>
+       <listitem open="0" id="lksdCpzWmqb9" type="815"/>
+       <listitem open="0" id="c9Ady9fZDApd" type="815"/>
+       <listitem open="0" id="J6SrFjjtMo1y" type="815"/>
+       <listitem open="0" id="d3XFSviQBFmP" type="815"/>
+       <listitem open="0" id="UsNwqau5Ow4w" type="815"/>
+       <listitem open="0" id="qBkgrMDYZBHs" type="815"/>
+       <listitem open="0" id="p3RBrTAGSyD0" type="815"/>
+       <listitem open="0" id="Mzq6M2DW4JX5" type="815"/>
+       <listitem open="0" id="iFylLUNEXyXp" type="815"/>
+      </listitem>
+     </listitem>
+     <listitem open="1" id="jl8iTtAjniPF" type="813"/>
+     <listitem open="1" id="drYaLl0RkWbH" type="818">
+      <listitem open="0" id="AB4jyvpwSus7" type="813">
+       <listitem open="0" id="Fjjiiu5zlmcp" type="815"/>
+       <listitem open="0" id="vrOT3VR0S22n" type="815"/>
+      </listitem>
+     </listitem>
+     <listitem open="1" id="P3i4lpbOg9wz" type="818">
+      <listitem open="0" id="zRGTdLXXldbO" type="813">
+       <listitem open="0" id="oP6Xwc6vARcS" type="815"/>
+       <listitem open="0" id="OodxdrHlI9vZ" type="815"/>
+      </listitem>
+     </listitem>
+    </listitem>
+    <listitem open="1" id="Use Case View" type="802"/>
+   </listitem>
+  </listview>
+  <codegeneration>
+   <codegenerator language="Python">
+    <sourcecode id="zjq4y7ys3TTn" value="if type(self)is Controller:&#xa;  raise TypeError(&quot;Controller should not be instantiated&quot;)&#xa;&#xa;self.interface=_interface&#xa;self.engine=_engine&#xa;"/>
+    <sourcecode id="TeWiEdNVZei4" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="GZAybvk4XGkk" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="xefRlmo1Jyzu" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="Eg2XdCiapNza" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="vz3gIG9XwB2X" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="pz28EvM9uPnA" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="EGm3XRYMRYTf" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="nTxDcVlqjVsE" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="G9oiFBF2cBFC" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="BdV0MBxaIlGX" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="bGXqPExapTY9" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="kNSU56egLBUk" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="3nlXlRgTn6vs" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="PepkhDLl04Gj" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="i3V9anUzPJi7" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="v2dJKJQoKEJQ" value="if type(self)is Interface:&#xa;  raise TypeError(&quot;Interface should not be instantiated&quot;)&#xa;&#xa;"/>
+    <sourcecode id="iFylLUNEXyXp" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="qBkgrMDYZBHs" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="J6SrFjjtMo1y" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="p3RBrTAGSyD0" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="UsNwqau5Ow4w" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="zIWMEbI9kSLM" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="d3XFSviQBFmP" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="c9Ady9fZDApd" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="9HPMPExTi1jQ" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="93713jrAyGWO" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="Mzq6M2DW4JX5" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="lksdCpzWmqb9" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="zAGum9eqWbch" value="if type(self)is Engine:&#xa;  raise TypeError(&quot;Engine should not be instantiated&quot;)&#xa;&#xa;"/>
+    <sourcecode id="p9f1ye7xoLpZ" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="zUSP8UlvcOxY" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="B5WUZ27LrbtQ" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="vK3nvxDlDtMN" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="y4s38k5df4sd" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="3CQgEGJwzwDw" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="uEVZWaMXmlE0" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="ze5Jvtkn7DMb" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="mAarMxT9eah6" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="eDERmyQFFGni" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="Yoon2cTrMgRe" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="VGIKqhsMTg9W" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="bYsaQjuvyAEo" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="voYFdaKE8CnY" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="CKgJUTpP6FHu" value="raise NotImplementedError()&#xa;"/>
+    <sourcecode id="c3RpV0cZqKL5" value="raise TypeError(&quot;TerminalInterface should not be instantiated&quot;)&#xa;"/>
+    <sourcecode id="IU1uOFl1IAol" value="print(&quot;  \x1b[1mWelcome to the Arch_Lab task planner!\x1b[0m&quot;)&#xa;"/>
+    <sourcecode id="05xeeEywgyp3" value="print(&quot;=&quot;*80,&quot;\n&quot;,title,sep=&quot;&quot;)&#xa;for option in opts:&#xa;  print(&quot;  [{}] {}&quot;.format(option[0],option[1]))&#xa;&#xa;"/>
+    <sourcecode id="Z5tjchZpZknD" value="print(&quot;\x1b[A&quot;,&quot; &quot;*80,&quot;\x1b[A&quot;,sep=&quot;&quot;)&#xa;choice=choice.upper()&#xa;for option in opts:&#xa;  if choice==option[0]:&#xa;    return option&#xa;&#xa;&#xa;return None&#xa;"/>
+    <sourcecode id="i1U3ObcVPYsy" value="print(&quot;=&quot;*80)&#xa;if tasks==[]:&#xa;  print(&quot;\t>> No tasks found &lt;&lt;&quot;)&#xa;&#xa;else:&#xa;  for id,task in enumerate(tasks):&#xa;    print(&quot;[{}]\t&quot;.format(id),task[1].strftime(&quot;%d %b %Y, %A:&quot;),&#xa;    end=&quot;&quot;)if not finished:&#xa;      if task[1]&lt;task[1].today():&#xa;        print(&quot; \x1b[1;31m&lt;&lt; !!OVERDUE!!\x1b[0m&quot;,end=&quot;&quot;)&#xa;&#xa;      elif task[1]==task[1].today():&#xa;        print(&quot; \x1b[1;32m&lt;&lt; Today!\x1b[0m&quot;,end=&quot;&quot;)&#xa;&#xa;&#xa;    print()&#xa;    print(&quot;  {}&quot;.format(task[0]))&#xa;    if task is not tasks[-1]:&#xa;      print()&#xa;&#xa;&#xa;&#xa;"/>
+    <sourcecode id="o7p0wjGkLeBV" value="TerminalInterface.print_tasks(tasks,True)&#xa;"/>
+    <sourcecode id="AqVTSey2HJZp" value="TerminalInterface.menu(opts,&quot;You are viewing finished tasks&quot;)&#xa;return TerminalInterface.menu_decide(opts,input())&#xa;"/>
+    <sourcecode id="q636Pbv00nL3" value="TerminalInterface.print_tasks(tasks,False)&#xa;"/>
+    <sourcecode id="3Yu3KF4xjRIa" value="TerminalInterface.menu(opts,&quot;You are viewing pending tasks&quot;)&#xa;return TerminalInterface.menu_decide(opts,input())&#xa;"/>
+    <sourcecode id="HRWysoWD21cH" value="try:&#xa;  return int(input(&quot;Which one? Provide number noted in brackets: &quot;))&#xa;&#xa;except ValueError:&#xa;  input(&quot;That was not a number. Press Return and try again.&quot;)&#xa;  return None&#xa;&#xa;"/>
+    <sourcecode id="iiHzkdaz46xx" value="content=input(&quot;Task description: &quot;)&#xa;date=input('Date (use &quot;YYYY-MM-DD&quot; format or similar '+&#xa;'with single character delimiters): ')try:&#xa;  return(content,int(date[:4]),int(date[5:7]),int(date[8:10]))&#xa;&#xa;except ValueError:&#xa;  return(content,None,None,None)&#xa;&#xa;"/>
+    <sourcecode id="MtTzr5wZnBXX" value="print(&quot;Creating new task. It will be marked as pending.&quot;)&#xa;return TerminalInterface.task_input()&#xa;"/>
+    <sourcecode id="dBAsjEv37O2y" value="print(&quot;Editing task {}.&quot;.format(id),&#xa;&quot;Enter new values or press Return to leave unchanged&quot;)return TerminalInterface.task_input()&#xa;"/>
+    <sourcecode id="GvJLHJJjFnwL" value="input(&quot;Task you asked for somehow does not exist. Press Return, &quot;+&#xa;&quot;check the number and try again.&quot;)"/>
+    <sourcecode id="wwFVyDlD82YQ" value="input(&quot;You entered something we did not expect. &quot;+&#xa;&quot;Press Return and try again.&quot;)"/>
+    <sourcecode id="7R7j0Bpw73P3" value="print('Your task list differs from the one on disk. Do you wish to',&#xa;'save changes?')choice=input('&quot;N&quot; for &quot;No&quot;, any key for &quot;Yes&quot;: ')&#xa;return choice.upper()!='N'&#xa;"/>
+    <sourcecode id="vraayo95EHpC" value="print(&quot;=&quot;*80)&#xa;print('The program is currently configured to save in',current,&#xa;'format. If you wish to change that, available values are:')for x in available:&#xa;  print(' ',x[0],'-',x[1]+'.')&#xa;&#xa;print()&#xa;choice=input('Enter new value (press Return to keep current one): ')&#xa;if choice in:&#xa;  x[0]for x in available&#xa;:&#xa;  return choice&#xa;&#xa;elif choice=='':&#xa;  return current&#xa;&#xa;else:&#xa;  input('Wrong input. Configuration will not be changed. '+&#xa;  'Press Return and try again.')return current"/>
+    <sourcecode id="46XjYW2ikxjy" value="self.interface.welcome()&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="gm93ve2zlXgH" value="PENDING_TASK_OPTS=(&#xa;(&quot;A&quot;,&quot;Add new task&quot;,self.add_new_task),(&quot;R&quot;,&quot;Remove task&quot;,self.remove_pending_task),(&quot;E&quot;,&quot;Edit task&quot;,self.edit_pending_task),(&quot;M&quot;,&quot;Mark task finished&quot;,self.finish_task),(&quot;F&quot;,&quot;View finished tasks&quot;,self.view_finished_tasks),(&quot;C&quot;,&quot;Edit configuration&quot;,self.view_config_pending),(&quot;Q&quot;,&quot;Quit&quot;,self.shutdown))&#xa;self.interface.print_pending_tasks(self.engine.view_pending_tasks())&#xa;try:&#xa;  self.interface.pending_tasks_menu(PENDING_TASK_OPTS)[2]()&#xa;&#xa;except TypeError:&#xa;  self.interface.bad_input()&#xa;  self.view_pending_tasks()&#xa;&#xa;"/>
+    <sourcecode id="aIxSbJlF3uIy" value="try:&#xa;  self.engine.new_task(*self.interface.new_task_dialog())&#xa;&#xa;except(TypeError,ValueError):&#xa;  self.interface.bad_input()&#xa;&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="9OEh2uWdAR3j" value="try:&#xa;  self.engine.remove_pending_task(self.interface.ask_task())&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="ExFSQuFXIREL" value="choice=self.interface.ask_task()&#xa;args=self.interface.edit_task_dialog(choice)&#xa;try:&#xa;  self.engine.edit_pending_task(choice,*args)&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;except ValueError:&#xa;  self.interface.bad_input()&#xa;&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="QPbz32MFxbhM" value="try:&#xa;  self.engine.finish_task(self.interface.ask_task())&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="wLtfWZ5uyetz" value="self.view_config()&#xa;self.view_pending_tasks()&#xa;"/>
+    <sourcecode id="t7mi4ti1EZei" value="FINISHED_TASK_OPTS=(&#xa;(&quot;W&quot;,&quot;Wipe finished tasks&quot;,self.clear_finished_tasks),(&quot;R&quot;,&quot;Remove task&quot;,self.remove_finished_task),(&quot;E&quot;,&quot;Edit task&quot;,self.edit_finished_task),(&quot;M&quot;,&quot;Mark task pending&quot;,self.unfinish_task),(&quot;L&quot;,&quot;View pending tasks&quot;,self.view_pending_tasks),(&quot;C&quot;,&quot;Edit configuration&quot;,self.view_config_finished),(&quot;Q&quot;,&quot;Quit&quot;,self.shutdown))&#xa;self.interface.print_finished_tasks(self.engine.view_finished_tasks())&#xa;try:&#xa;  self.interface.finished_tasks_menu(FINISHED_TASK_OPTS)[2]()&#xa;&#xa;except TypeError:&#xa;  self.interface.bad_input()&#xa;  self.view_finished_tasks()&#xa;&#xa;"/>
+    <sourcecode id="9WiwJj4Bortt" value="self.engine.clear_finished_tasks()&#xa;self.view_finished_tasks()&#xa;"/>
+    <sourcecode id="jGXPU7qddWav" value="try:&#xa;  self.engine.remove_finished_task(self.interface.ask_task())&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;self.view_finished_tasks()&#xa;"/>
+    <sourcecode id="HksTz41gKY3n" value="choice=self.interface.ask_task()&#xa;args=self.interface.edit_task_dialog(choice)&#xa;try:&#xa;  self.engine.edit_finished_task(choice,*args)&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;except ValueError:&#xa;  self.interface.bad_input()&#xa;&#xa;self.view_finished_tasks()&#xa;"/>
+    <sourcecode id="CTEjELMU4Cv1" value="try:&#xa;  self.engine.unfinish_task(self.interface.ask_task())&#xa;&#xa;except TypeError:&#xa;  pass&#xa;&#xa;except IndexError:&#xa;  self.interface.bad_task()&#xa;&#xa;self.view_finished_tasks()&#xa;"/>
+    <sourcecode id="hbWIp7LzaZip" value="self.view_config()&#xa;self.view_finished_tasks()&#xa;"/>
+    <sourcecode id="NMlw59sniO3W" value="self.save_dialog()&#xa;"/>
+    <sourcecode id="KgtRJr1eDkYH" value="if self.engine.changes_detected()and self.interface.save_dialog():&#xa;  self.engine.save_tasks()&#xa;&#xa;"/>
+    <sourcecode id="oD91LtRdXI3o" value="t1,t2=(self.engine.get_savemethod(),&#xa;self.engine.get_available_savemethods())tmp=self.interface.config_menu(t1,t2)&#xa;self.engine.set_savemethod(tmp)&#xa;"/>
+    <sourcecode id="fZqcnnN0LmWW" value="if len(sys.argv)>1:&#xa;  self.process_args()&#xa;&#xa;else:&#xa;  super().run()&#xa;&#xa;"/>
+    <sourcecode id="iWsRGbcvAQYx" value="parser=argparse.ArgumentParser()&#xa;group=parser.add_mutually_exclusive_group()&#xa;group.add_argument(&quot;-a&quot;,&quot;--add&quot;,action='store_true')&#xa;group.add_argument(&quot;-r&quot;,&quot;--remove&quot;,action='store_true')&#xa;group.add_argument(&quot;-e&quot;,&quot;--edit&quot;,action='store_true')&#xa;group.add_argument(&quot;-m&quot;,&quot;--mfinish&quot;,action='store_true')&#xa;group.add_argument(&quot;-f&quot;,&quot;--finished&quot;,action='store_true')&#xa;group.add_argument(&quot;-c&quot;,&quot;--config&quot;,action='store_true')&#xa;args=parser.parse_args()&#xa;if args.add:&#xa;  self.add_new_task()&#xa;&#xa;elif args.remove:&#xa;  self.remove_pending_task()&#xa;&#xa;elif args.edit:&#xa;  self.edit_pending_task()&#xa;&#xa;elif args.mfinish:&#xa;  self.finish_task()&#xa;&#xa;elif args.finished:&#xa;  self.view_finished_tasks()&#xa;&#xa;elif args.config:&#xa;  self.view_config_pending()"/>
+    <sourcecode id="vrOT3VR0S22n" value="with open(target,'wb')as fil:&#xa;  pickle.dump(item,fil)&#xa;&#xa;"/>
+    <sourcecode id="Fjjiiu5zlmcp" value="try:&#xa;  with open(target,'rb')as fil:&#xa;    return pickle.load(fil)&#xa;&#xa;&#xa;except(FileNotFoundError,EOFError):&#xa;  return([],[])"/>
+    <sourcecode id="VsQVEgv45EQl" value="with open(target,'w')as fil:&#xa;  json.dump(item,fil,cls=JsonFileBackend.TaskJSONEncoder)&#xa;&#xa;"/>
+    <sourcecode id="ELZC5lMtbpt6" value="try:&#xa;  with open(target,'r')as fil:&#xa;    tmp1,tmp2=json.load(fil)&#xa;    tmp1=[engine.Task(x['content'],&#xa;    x['date'][0],x['date'][1],x['date'][2])for x in tmp1 if'__engine.Task__'in x.keys()]tmp2=[engine.Task(x['content'],&#xa;    x['date'][0],x['date'][1],x['date'][2])for x in tmp2 if'__engine.Task__'in x.keys()]return(tmp1,tmp2)&#xa;&#xa;&#xa;except(FileNotFoundError,json.decoder.JSONDecodeError):&#xa;  return([],[])"/>
+    <sourcecode id="OodxdrHlI9vZ" value="with open(target,'w')as fil:&#xa;  yaml.dump(item,fil)&#xa;&#xa;"/>
+    <sourcecode id="oP6Xwc6vARcS" value="try:&#xa;  with open(target,'r')as fil:&#xa;    test=yaml.load(fil)&#xa;&#xa;&#xa;except(FileNotFoundError,EOFError):&#xa;  test=None&#xa;&#xa;return test if test is not None else([],[])"/>
+   </codegenerator>
+  </codegeneration>
+ </XMI.extensions>
+</XMI>

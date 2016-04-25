@@ -31,6 +31,7 @@ import sys
 import configparser
 
 CONFIG = 'config.ini'
+SAVEFILE = 'taskstorage'
 
 
 class Engine():

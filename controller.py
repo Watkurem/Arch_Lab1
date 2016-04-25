@@ -19,6 +19,12 @@
 # Arch_Lab. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
+"""Arch_Lab controller implementations.
+
+This module provides implementations of Controller class for Arch_Lab program.
+You probably should not be importing it directly.
+"""
+
 import lab
 import sys
 import argparse

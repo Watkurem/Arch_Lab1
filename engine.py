@@ -188,34 +188,34 @@ class ListEngine(EngineConfig):
     def new_task(self, content, year, month, day):
         bisect.insort(self.pending_task_list, Task(content, year, month, day))
 
-    def remove_pending_task(self, id):
+    def remove_pending_task(self, idx):
         """Remove task from the list of pending tasks.
 
         Will crash if task does not exist. Make sure you verify existence.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         """
-        self.pending_task_list.pop(id)
+        self.pending_task_list.pop(idx)
 
-    def edit_pending_task(self, id, content, year, month, day):
+    def edit_pending_task(self, idx, content, year, month, day):
         """Edit a task in the list of pending tasks.
 
         If content is "", description will not change. If either of year,
         month or date is None, all three of them will not change.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         content: string - new task description.
         year: int - new year task is scheduled on.
         month: int - new month task is scheduled on.
         day: int - new day task is scheduled on.
         """
         if content != "":
-            self.pending_task_list[id].content = content
+            self.pending_task_list[idx].content = content
         if year is not None and month is not None and day is not None:
-            self.pending_task_list[id].date = datetime.date(year, month, day)
+            self.pending_task_list[idx].date = datetime.date(year, month, day)
 
-    def finish_task(self, id):
-        bisect.insort(self.finished_task_list, self.pending_task_list.pop(id))
+    def finish_task(self, idx):
+        bisect.insort(self.finished_task_list, self.pending_task_list.pop(idx))
 
     def view_finished_tasks(self):
         """Fetch finished tasks.
@@ -234,34 +234,34 @@ class ListEngine(EngineConfig):
         """
         self.finished_task_list = []
 
-    def remove_finished_task(self, id):
+    def remove_finished_task(self, idx):
         """Remove task from the list of finished tasks.
 
         Will crash if task does not exist. Make sure you verify existence.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         """
-        self.finished_task_list.pop(id)
+        self.finished_task_list.pop(idx)
 
-    def edit_finished_task(self, id, content, year, month, day):
+    def edit_finished_task(self, idx, content, year, month, day):
         """Edit a task in the list of finished tasks.
 
         If content is "", description will not change. If either of year,
         month or date is None, all three of them will not change.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         content: string - new task description.
         year: int - new year task is scheduled on.
         month: int - new month task is scheduled on.
         day: int - new day task is scheduled on.
         """
         if content != "":
-            self.finished_task_list[id].content = content
+            self.finished_task_list[idx].content = content
         if year is not None and month is not None and day is not None:
-            self.finished_task_list[id].date = datetime.date(year, month, day)
+            self.finished_task_list[idx].date = datetime.date(year, month, day)
 
-    def unfinish_task(self, id):
-        bisect.insort(self.pending_task_list, self.finished_task_list.pop(id))
+    def unfinish_task(self, idx):
+        bisect.insort(self.pending_task_list, self.finished_task_list.pop(idx))
 
     def save_tasks(self):
         """Serialize task lists.

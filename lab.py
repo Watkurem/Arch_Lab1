@@ -61,23 +61,23 @@ class Engine():
         """
         raise NotImplementedError()
 
-    def remove_pending_task(self, id):
+    def remove_pending_task(self, idx):
         """Remove task from the list of pending tasks.
 
         May crash if task does not exist.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         """
         raise NotImplementedError()
 
-    def edit_pending_task(self, id, content, year, month, day):
+    def edit_pending_task(self, idx, content, year, month, day):
         """Edit a task in the list of pending tasks.
 
         If content is "", description should not change. If all of year,
         month and date are None, all three of them should not change. Other
         behaviour is implementation dependent.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         content: string - new task description.
         year: int - new year task is scheduled on.
         month: int - new month task is scheduled on.
@@ -85,10 +85,10 @@ class Engine():
         """
         raise NotImplementedError()
 
-    def finish_task(self, id):
+    def finish_task(self, idx):
         """Move task from the pending list to the finished list.
 
-        id: int - descriptor, namely position of a task in a list.
+        idx: int - descriptor, namely position of a task in a list.
         """
         raise NotImplementedError()
 
@@ -108,23 +108,23 @@ class Engine():
         """
         raise NotImplementedError()
 
-    def remove_finished_task(self, id):
+    def remove_finished_task(self, idx):
         """Remove task from the list of finished tasks.
 
         May crash if task does not exist.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         """
         raise NotImplementedError()
 
-    def edit_finished_task(self, id, content, year, month, day):
+    def edit_finished_task(self, idx, content, year, month, day):
         """Edit a task in the list of finished tasks.
 
         If content is "", description should not change. If all of year,
         month and date are None, all three of them should not change. Other
         behaviour is implementation dependent.
 
-        id: int - descriptor, namely position of a task in the list.
+        idx: int - descriptor, namely position of a task in the list.
         content: string - new task description.
         year: int - new year task is scheduled on.
         month: int - new month task is scheduled on.
@@ -132,10 +132,10 @@ class Engine():
         """
         raise NotImplementedError()
 
-    def unfinish_task(self, id):
+    def unfinish_task(self, idx):
         """Move task from the finished list to the pending list.
 
-        id: int - descriptor, namely position of a task in a list.
+        idx: int - descriptor, namely position of a task in a list.
         """
         raise NotImplementedError()
 
@@ -337,7 +337,7 @@ class Interface():
         """
         raise NotImplementedError()
 
-    def edit_task_dialog(id):
+    def edit_task_dialog(idx):
         """Provide interactive dialog for editing a task.
 
         return: (content, year, month, day)

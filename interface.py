@@ -101,8 +101,8 @@ class TerminalInterface(lab.Interface):
         if tasks == []:
             print("\t>> No tasks found <<")
         else:
-            for id, task in enumerate(tasks):
-                print("[{}]\t".format(id), task[1].strftime("%d %b %Y, %A:"),
+            for idx, task in enumerate(tasks):
+                print("[{}]\t".format(idx), task[1].strftime("%d %b %Y, %A:"),
                       end="")
                 if not finished:
                     if task[1] < task[1].today():
@@ -206,7 +206,7 @@ class TerminalInterface(lab.Interface):
         print("Creating new task. It will be marked as pending.")
         return TerminalInterface.task_input()
 
-    def edit_task_dialog(id):
+    def edit_task_dialog(idx):
         """Provide interactive dialog for editing a task.
 
         Prints status and calls task_input().
@@ -214,7 +214,7 @@ class TerminalInterface(lab.Interface):
         return: (str, int, int, int) if date read correctly,
                 (str, None, None, None) if date not read correctly.
         """
-        print("Editing task {}.".format(id),
+        print("Editing task {}.".format(idx),
               "Enter new values or press Return to leave unchanged")
         return TerminalInterface.task_input()
 

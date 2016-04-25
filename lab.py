@@ -37,47 +37,156 @@ import sys
 
 
 
+class Engine():
+    """Abstract class/interface for engine implementations for Arch_Lab.
 
+    An engine should implement all of these to be usable."""
+    def __init__(self):
+        if type(self) is Engine:
+            raise TypeError("Engine should not be instantiated")
 
+    def view_pending_tasks(self):
+        """Fetch pending tasks.
 
+        Should return the list of stored pending tasks as a list of tuples.
 
+        return: [(string, datetime.date), -||-]
+        """
+        raise NotImplementedError()
 
+    def new_task(self, content, year, month, day):
+        """Add new task to the list of pending tasks.
 
+        content: string - task description.
+        year: int - year task is scheduled on.
+        month: int - month task is scheduled on.
+        day: int - day task is scheduled on.
+        """
+        raise NotImplementedError()
 
+    def remove_pending_task(self, id):
+        """Remove task from the list of pending tasks.
 
+        May crash if task does not exist.
 
+        id: int - descriptor, namely position of a task in the list.
+        """
+        raise NotImplementedError()
 
+    def edit_pending_task(self, id, content, year, month, day):
+        """Edit a task in the list of pending tasks.
 
+        If content is "", description should not change. If all of year,
+        month and date are None, all three of them should not change. Other
+        behaviour is implementation dependent.
 
+        id: int - descriptor, namely position of a task in the list.
+        content: string - new task description.
+        year: int - new year task is scheduled on.
+        month: int - new month task is scheduled on.
+        day: int - new day task is scheduled on.
+        """
+        raise NotImplementedError()
 
+    def finish_task(self, id):
+        """Move task from the pending list to the finished list.
 
+        id: int - descriptor, namely position of a task in a list.
+        """
+        raise NotImplementedError()
 
+    def view_finished_tasks(self):
+        """Fetch finished tasks.
 
+        Should return the list of stored finished tasks as a list of tuples.
 
+        return: [(string, datetime.date), -||-]
+        """
+        raise NotImplementedError()
 
+    def clear_finished_tasks(self):
+        """Remove all finished tasks.
 
+        List of finished tasks should be empty after this.
+        """
+        raise NotImplementedError()
 
+    def remove_finished_task(self, id):
+        """Remove task from the list of finished tasks.
 
+        May crash if task does not exist.
 
+        id: int - descriptor, namely position of a task in the list.
+        """
+        raise NotImplementedError()
 
+    def edit_finished_task(self, id, content, year, month, day):
+        """Edit a task in the list of finished tasks.
 
+        If content is "", description should not change. If all of year,
+        month and date are None, all three of them should not change. Other
+        behaviour is implementation dependent.
 
+        id: int - descriptor, namely position of a task in the list.
+        content: string - new task description.
+        year: int - new year task is scheduled on.
+        month: int - new month task is scheduled on.
+        day: int - new day task is scheduled on.
+        """
+        raise NotImplementedError()
 
+    def unfinish_task(self, id):
+        """Move task from the finished list to the pending list.
 
+        id: int - descriptor, namely position of a task in a list.
+        """
+        raise NotImplementedError()
 
+    def save_tasks(self):
+        """Store task lists.
 
+        Should employ some method of storing currently used tasks so that they
+        can be loaded later even if program was removed from memory.
+        """
+        raise NotImplementedError()
 
+    def get_savemethod(self):
+        """Get currently employed savemethod.
 
+        Savemethod - some specific way to store task lists used by save_tasks.
 
+        return: string - savemethod.
+        """
+        raise NotImplementedError()
 
+    def get_available_savemethods(self):
+        """Get savemethods that are currently available.
 
+        And their hopefully helpful descriptions.
 
+        Savemethod - some specific way to store task lists used by save_tasks.
 
+        return: seq of two-item seqs ((string, string), -||-), where first item
+                in every seq is a savemethod and second is it's hopefully
+                helpful description.
+        """
+        raise NotImplementedError()
 
+    def set_savemethod(self, method):
+        """Change employed savemethod.
 
+        Savemethod - some specific way to store task lists used by save_tasks.
 
+        method: string - new savemethod to set.
+        """
+        raise NotImplementedError()
 
+    def changes_detected(self):
+        """Answers if task set changed.
 
+        Specifically, if currently used task set differs from stored ones.
+        """
+        raise NotImplementedError()
 
 
 class Controller():

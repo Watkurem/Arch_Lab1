@@ -27,40 +27,22 @@ should not be importing it directly.
 """
 
 import yaml
+import engine
 
 
-def save(target, item):
-    """Serialize item into filename target. Create file or overwrite.
+class YamlFileBackend(engine.FileBackend):
+    """FileBackend implementation for YAML format.
 
-    target: string - file name.
-    item: any python data structure - item to serialize.
-
-    >>> import tempfile; import engine; \
-    tmp = tempfile.NamedTemporaryFile(mode="r+"); \
-    control = ([engine.Task("A", 1, 1, 1)], [engine.Task("B", 1000, 2, 3)]); \
-    save(tmp.name, control); \
-    tester = load(tmp.name); \
-    control == tester
-    True
+    Provides unified serialization interface to pyyaml for EngineConfig.
     """
-    with open(target, 'w') as fil:
-        yaml.dump(item, fil)
+    def save(target, item):
+        with open(target, 'w') as fil:
+            yaml.dump(item, fil)
 
-
-def load(target):
-    """Deserialize filename target.
-
-    Will return tuple of two empty lists if file does not exist.
-
-    target: string - file name.
-    return: any Python data structure or ([], [])
-
-    >>> load("/im an idiot and store this file in root")
-    ([], [])
-    """
-    try:
-        with open(target, 'r') as fil:
-            test = yaml.load(fil)
-    except (FileNotFoundError, EOFError):
-        test = None
-    return test if test is not None else ([], [])
+    def load(target):
+        try:
+            with open(target, 'r') as fil:
+                test = yaml.load(fil)
+        except (FileNotFoundError, EOFError):
+            test = None
+        return test if test is not None else ([], [])

@@ -21,9 +21,8 @@
 
 """Arch_Lab YAML serialization backend.
 
-This module is a serialization backend for the Arch_Lab program. It exists to
-provide unified serialization interface to pyyaml for engine. You probably
-should not be importing it directly.
+This module provides a serialization backend for the Arch_Lab program. You
+probably should not be importing it directly.
 """
 
 import yaml

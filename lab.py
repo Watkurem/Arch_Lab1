@@ -31,8 +31,7 @@ generally expected behaviour.
 'Pending' means that task is not yet done. Finished means that task is done.
 """
 
-import interface
-import engine
+
 import sys
 import configparser
 

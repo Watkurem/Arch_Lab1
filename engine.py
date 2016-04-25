@@ -19,13 +19,10 @@
 # Arch_Lab. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
-"""Arch_Lab simple list engine.
+"""Arch_Lab engine implementations.
 
-This module is an engine ("model") for the Arch_Lab program. You probably
-should not be importing it directly.
-
-pending_task_list: list of pending tasks.
-finished_task_list: list of finished tasks.
+This module provides implementations of Engine class for Arch_Lab program. You
+probably should not be importing it directly.
 """
 
 import sys

@@ -19,10 +19,10 @@
 # Arch_Lab. If not, see <http://www.gnu.org/licenses/>.
 ###############################################################################
 
-"""Arch_Lab terminal interface.
+"""Arch_Lab interface implementations.
 
-This module is a terminal interface ("view") for the Arch_Lab program. You
-probably should not be importing it directly.
+This module provides implementations of Interface class for Arch_Lab program.
+You probably should not be importing it directly.
 """
 
 import locale

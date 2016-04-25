@@ -34,7 +34,9 @@ generally expected behaviour.
 import interface
 import engine
 import sys
+import configparser
 
+CONFIG = 'config.ini'
 
 
 class Engine():
@@ -376,6 +378,29 @@ class Interface():
         return: string - new serialization method.
         """
         raise NotImplementedError()
+
+
+def main():
+    """Entry point for program."""
+    import interface
+    import engine
+    import controller
+
+    config = configparser.ConfigParser()
+    config.read(CONFIG)
+    try:
+        config['DEFAULT']['controller']
+    except KeyError:
+        config['DEFAULT']['controller'] = 'argument'
+        with open(CONFIG, 'w') as fil:
+            config.write(fil)
+
+    if config['DEFAULT']['controller'] == 'simple':
+        ctr = controller.SimpleController
+    else:
+        ctr = controller.ArgumentController
+    ctr(interface.TerminalInterface, engine.ListEngine()).run()
+    sys.exit()
 
 
 if __name__ == "__main__":

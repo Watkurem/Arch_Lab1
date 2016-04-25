@@ -25,9 +25,9 @@ This module provides implementations of Controller class for Arch_Lab program.
 You probably should not be importing it directly.
 """
 
-import lab
 import sys
 import argparse
+import lab
 
 
 class SimpleController(lab.Controller):
